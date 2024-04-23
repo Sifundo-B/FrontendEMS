@@ -1,0 +1,39 @@
+.form-check{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    display: flex;
+     justify-content: center;
+}
+
+.sideBar{
+    background-color: rgb(228, 228, 85);
+    height: 100%;
+    position: fixed;
+    width: 50%;
+    margin-right: 50%;
+   
+
+}
+// *{
+//   width: 100%;
+//   padding: 12px 20px;
+//   margin: 8px 0;
+//   display: inline-block;
+// }
+
+
+.form{  
+    margin-left: 50%;
+    width: 50%;
+    height: 100%;
+    border: 2px solid blanchedalmond;
+    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 20%;
+    padding-bottom: 50%;
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.577);
+}
