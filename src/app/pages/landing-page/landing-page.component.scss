@@ -4,15 +4,19 @@
 }
 
 .main-section{
-    background-image: url('../../../assets/Vector.png');
+    background-image: url('../../../assets/images/Vector.png');
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     font-family: 'Inria Sans', sans-serif;
     padding-top: 50px;
 }
+
+// *{
+//     border: 1px solid red;
+// }
 
 
 .content{
@@ -42,14 +46,45 @@
 
 .bottom-content{
     color: black;
-    width: 100%;
+    width: 80%;
     margin-left: 50px;
     margin-top: -40px;
     display: grid;
     grid-template-columns: 50% 50%;
+    align-items: flex-start;
 }
 
 .bottom-content h1{
     width: 60%;
     font-weight: 300;
+}
+
+.stats{
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 300px;
+    align-self: flex-start;
+    margin-top: -200px;
+    width: 100%;
+}
+
+.stats-box{
+    position: relative;
+    left: 0;
+    top: 0;
+    background-color: white;
+    width: 60%;
+    height: 100%;
+    z-index: 99;
+    font-family: 'Inria Sans';
+    padding-left: 20px;
+    padding-top: 8px;
+}
+
+.stats img{
+    position: absolute;
+    top: 30px;
+    left: -40px;
+    z-index: 0;
 }
