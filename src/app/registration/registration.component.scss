@@ -1,16 +1,118 @@
 .container{
-    width: 500px;
-    height: 600px;
-    background-color:rgb(141, 155, 156);
+    width: 600px;
+    height: 700px;
+    background-color:whitesmoke;
+    border:2px solid;
 }
 
 button{
     background-color:white;
-}
-input{
-
-    width: 280px;
-}
-.heading {
+    margin-left: 220px;
+    
+    border-radius: 10px;
+   margin-top: 30px;
+    height:40px;
+    width: 100px;
+    background-color:purple ;
+    color:white;
+    
     
 }
+
+
+input{
+    width: 200px;
+    height: 30px;}
+
+
+#name::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+
+.heading  {
+  background-color:whitesmoke;
+  height: 120px;
+}
+
+
+h1{
+    margin-left: 140px;
+    font-family:'Montserrat';
+    padding-top: 40px;
+    
+}
+
+
+#gender::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+
+#cellphone::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+
+#email::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+
+#address::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+
+#maritalStatus::placeholder{
+    color: rgb(221, 215, 215);
+}
+#idnumber::placeholder{
+    color: rgb(221, 215, 215);
+}
+#id::placeholder{
+    color: rgb(221, 215, 215);
+}
+#password::placeholder{
+    color: rgb(221, 215, 215);
+}
+
+.col4{
+   margin-left: 350px; 
+   margin-top: -60px;
+}
+.col6{
+    margin-left: 350px; 
+    margin-top: -60px;
+}
+.col8{
+    margin-left: 350px; 
+    margin-top: -60px;
+}
+
+
+
+
+.col11{
+    margin-left: 350px;
+    margin-top: -120px;
+}
+.col2{
+    margin-left: 350px;
+    margin-top: -60px;
+}
+.col12{
+    margin-left: 350px;
+    margin-top: -20px;
+}
+#lastname::placeholder{
+    color: rgb(221, 215, 215);}
+    
+    
+    #cellnumber::placeholder{
+        color: rgb(221, 215, 215);}
+
+        #emailaddress::placeholder{
+            color: rgb(221, 215, 215);}
+            #employeeId::placeholder{
+                        color: rgb(221, 215, 215)};
