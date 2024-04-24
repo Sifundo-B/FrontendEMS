@@ -1,0 +1,40 @@
+{
+    "employeeData":[
+        {
+            "name": "Alice Johnson",
+            "workRole": "Software Engineer",
+            "department": "Engineering",
+            "address": "123 Main Street, Springfield, IL",
+            "phone": "123-456-7890"
+          },
+          {
+            "name": "Bob Smith",
+            "workRole": "Project Manager",
+            "department": "Project Management",
+            "address": "456 Elm Street, Springfield, IL",
+            "phone": "987-654-3210"
+          },
+          {
+            "name": "Carol Lee",
+            "workRole": "Data Analyst",
+            "department": "Data Science",
+            "address": "789 Oak Street, Springfield, IL",
+            "phone": "555-555-5555"
+          },
+          {
+            "name": "David Brown",
+            "workRole": "HR Specialist",
+            "department": "Human Resources",
+            "address": "321 Pine Street, Springfield, IL",
+            "phone": "444-444-4444"
+          },
+          {
+            "name": "Emily Davis",
+            "workRole": "Marketing Coordinator",
+            "department": "Marketing",
+            "address": "654 Cedar Street, Springfield, IL",
+            "phone": "333-333-3333"
+          }
+    ]
+}
+
