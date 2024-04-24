@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+     padding: 0; 
+     background-color: black;
+     
+  }
+  button{
+    border: 0;
+    margin-bottom: 10%;
+    background-color: white;
+  }
+
+//  .container{
+//      width: 100%;
+//      height: 600px;
+//      background-color:black;
+//      margin-top: 100px;
+//      margin-left: 0;
+//  }
+
+.sideBar{
+    width: 20%;
+    height: 100%;
+    margin-top: 100px;
+    
+    margin-right: 80%;
+    //position: relative;
+    border: 1px solid #F1DDFF;
+
+}
+
+.HomeIcon{
+width: 10%;     
+height: 5%;
+margin-left: 5%;
+border-radius: 50%;
+
+} 
+.payIcon{
+    width: 10%;     
+    height: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: white;
+}
+
+ .empMan{
+     color: var(--divColor);
+     width: 100%;
+ }
+
+ .pay{
+     color: var(--divColor);
+     width: 100%;
+ }
+
+ .update{
+     color: var(--divColor);
+     width: 100%;
+ }
+
+.empIcon{
+    width: 10%;     
+    height: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: white;
+}
+.updateIcon{
+    width: 10%;     
+    height: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+.logOutIcon{
+    width: 10%;     
+    height: 5%;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: white;
+    
+}
+
+.logOut{
+    margin-top: 450px;
+    color: var(--divColor);
+    width: 100%;
+}
+
+.home{
+    color: var(--divColor);
+}
+
+
+
