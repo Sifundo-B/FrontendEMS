@@ -1,10 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MyServiceService {
+export class EmpDataService {
 
-constructor() { }
+  private Url = 'src/fake api/message.json'; //Replace with your API URL
+  //private Url = 'https://fakestoreapi.com/products/';
+    constructor(private http : HttpClient) { }
 
+    getEmployees(): Observable<any>
+    {
+      return this.http.get<any>(this.Url);
+    }
 }

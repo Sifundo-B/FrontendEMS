@@ -1,11 +1,11 @@
-<div class="dash">
+<div class="dash" *ngFor="let employee of data">
     <div class="dp">
         
     </div> <br>
     <div class="personal">
         <h3 class="pers">Personal Information</h3>
-        <P class="pers">Names :</P>
-        <p class="pers">Surname :</p>
+        <P class="pers">Names :  {{employee.name}} </P>
+        <p class="pers">Surname : {{employee.surname}}</p>
         <P class="pers">D.O.B :</P>
         <P class="pers">ID :</P>
         <P class="pers">Gender :</P>
