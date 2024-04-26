@@ -16,7 +16,7 @@ export class GetEmployeeDataService {
 
   getEmployees(): Observable<any>{
     return this.http.get<any>(this.url)
-    //console.log(this.url);
+  
   }
   
   
