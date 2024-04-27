@@ -8,8 +8,8 @@ import { employeeData } from '../interfaces/employeeData';
 })
 export class EmployeeService {
 
-  private Url = 'http://localhost:3000/employeeData'; //Replace with your API URL
-//private Url = 'https://fakestoreapi.com/products/';
+  private Url = '.src/app/message.json';
+
   constructor(private http : HttpClient) { }
 
   getEmployees(): Observable<employeeData[]>

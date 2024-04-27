@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { employeeData } from 'src/app/interfaces/employeeData';
 import { EmployeeService } from 'src/app/services/employee.service';
 
 
@@ -10,9 +11,9 @@ import { EmployeeService } from 'src/app/services/employee.service';
 })
 export class EmployeeDashboardComponent {
 
-  data: any[] = [];
+  data: employeeData[] = [];
 
-  constructor(private http:HttpClient , private employee : EmployeeService) {}
+  constructor(private http : HttpClient , private employee : EmployeeService) {}
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
