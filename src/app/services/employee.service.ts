@@ -8,7 +8,7 @@ import { employeeData } from '../interfaces/employeeData';
 })
 export class EmployeeService {
 
-  private Url = '.src/app/message.json';
+  private Url = 'http://localhost:3000/employeeData';
 
   constructor(private http : HttpClient) { }
 

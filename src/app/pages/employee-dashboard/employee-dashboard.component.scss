@@ -11,10 +11,11 @@
     margin-left: 20%;
     position: absolute;
     font-size: 16px;
+    overflow: hidden;
 }
 
 .personal {
-    width: 300px;
+    width: 30%;
     height: 300px;
     margin-left: 10px;
     margin-top: 275px;
@@ -26,7 +27,7 @@
 }
 
 .work {
-    width: 600px;
+    width: 55%;
     height: 170px;
     margin-bottom: 800px;
     margin-left: 350px;
@@ -41,7 +42,7 @@
 }
 
 .contact {
-    width: 600px;
+    width: 55%;
     border-radius: 10px;
     text-align: center;
     height: 340px;
@@ -61,6 +62,7 @@
     margin-left: 10px;
     margin-top: 10px;
     float: left;
+    overflow: hidden;
 
 }
 
@@ -74,4 +76,9 @@ h3 {
 }
 .pers {
     margin: 20px;
+}
+
+img {
+    height: 270px;
+    width: 300px;
 }

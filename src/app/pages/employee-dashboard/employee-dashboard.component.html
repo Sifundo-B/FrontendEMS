@@ -1,6 +1,6 @@
 <div class="dash" *ngFor="let employee of data">
     <div class="dp">
-        <img [src]= "employee.imgUrl" alt="Profile picture">
+        <img src= "{{employee.imgUrl}}" alt="">
     </div> <br>
     <div class="personal">
         <h3 class="pers">Personal Information</h3>
@@ -10,7 +10,7 @@
         <P class="pers">ID : {{employee.idNo}} </P>
         <P class="pers">Gender : {{employee.gender}} </P>
     </div>
-        
+        <h3>{{employee.name}} {{employee.surname}}</h3>
     <div class="work">
         <h3>Work Profile</h3>
         <p>Start date :  </p>

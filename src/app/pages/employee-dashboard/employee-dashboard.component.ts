@@ -11,13 +11,11 @@ import { EmployeeService } from 'src/app/services/employee.service';
 })
 export class EmployeeDashboardComponent {
 
-  data: employeeData[] = [];
+  data: any[] = [];
 
   constructor(private http : HttpClient , private employee : EmployeeService) {}
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
     this.getEmployeeData();
   }
   
@@ -33,6 +31,8 @@ export class EmployeeDashboardComponent {
         console.error('Error loading employeee details: ', error);
       }
     )
+      
+    
   }
 
 
