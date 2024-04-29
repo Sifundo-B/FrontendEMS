@@ -8,6 +8,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PaySlipComponent } from './pages/pay-slip/pay-slip.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavigationComponent,
     SideBarComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    PaySlipComponent
   ],
   imports: [
     BrowserModule,

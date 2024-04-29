@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import {MyInterface} from 'src/app/interfaces/my-interface';
+
 
 @Component({
   selector: 'app-login',
@@ -9,9 +11,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  //This declares the as part of formGroup and making sure that the for form is initialised b4 used  
+
+  empAdmin : MyInterface={
+    email:"yandi@gmail.com" ,
+    password: "1234" 
+  }
   
+   
+
+  //This declares the as part of formGroup and making sure that the for form is initialised b4 used  
   public loginForm !:FormGroup
+  details: any;
 
   constructor(private formbuilder:FormBuilder, private http: HttpClient, private router:Router){}
 
@@ -35,8 +45,10 @@ export class LoginComponent {
         {
           this.loginForm.reset();
           this.router.navigate(["/dashboard"])
-        // }else if(theUser === ){
-
+        // }else if( theUser.email==="yandi@gmail.com" && theUser.password===){
+          
+        //   this.loginForm.reset();
+        //   this.router.navigate(["/side-bar"])
          }
         else
         {

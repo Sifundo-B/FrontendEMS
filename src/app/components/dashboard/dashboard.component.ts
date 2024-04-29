@@ -19,15 +19,31 @@ export class DashboardComponent {
    //The function that gets the data from our service
    gettingEmp(){
     
+
     this.empService.getEmployees().subscribe(
-       (response)=>{
-        this.empData = response;
-        //console.log(this.empData);
-       },
-       (error)=>{
-        console.error('Error loading employee details:', error);
-       }
-    )
+      (response)=>{
+       this.empData = response;
+       //console.log(this.empData);
+      },
+      (error)=>{
+       console.error('Error loading employee details:', error);
+      }
+   )
+
+
+
+
+
+    // this.empService.getEmployees().subscribe(
+    //    (response)=>{
+    //     this.empData = response;
+    //     //console.log(this.empData);
+    //    },
+    //    (error)=>{
+    //     console.error('Error loading employee details:', error);
+    //    }
+    // )
+
    }
 
     
