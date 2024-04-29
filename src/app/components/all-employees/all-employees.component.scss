@@ -1,0 +1,84 @@
+.container-employees {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-employees .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container-employees .titles h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.container-employees .titles p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.container-employees button {
+    padding: 10px 20px;
+    background-color: var(--btn-colour);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-employees button:hover {
+    background-color: rgb(174, 29, 174);
+}
+
+.update-btn{
+    background-color: var(--btn-green);
+    padding: 10px 30px 10px 30px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.delete-btn{
+    background-color: var(--btn-red);
+    padding: 10px 30px 10px 30px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;    
+    cursor: pointer;
+}
+
+.container-employees table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.container-employees th, 
+.container-employees td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.container-employees th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.container-employees tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container-employees tbody tr:hover {
+    background-color: #f0f0f0;
+}
