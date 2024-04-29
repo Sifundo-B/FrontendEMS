@@ -1,0 +1,85 @@
+{
+    "employeeData":[
+        {
+            "name": "Alice Johnson",
+            "workRole": "Software Engineer",
+            "department": "Engineering",
+            "address": "123 Main Street, Springfield, IL",
+            "phone": "123-456-7890",
+            "profilePic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Ft4.ftcdn.net%2Fjpg%2F03%2F83%2F25%2F83%2F360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg&tbnid=aggE_KujE07XGM&vet=12ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygOegUIARCQAQ..i&imgrefurl=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dperson&docid=u8MkgSDI8RpPkM&w=540&h=360&q=person&ved=2ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygOegUIARCQAQ" ,                                                     
+            "IdNo":"163252453243",
+            "EmployeeID":"1",
+            "Gender":"Female",
+            "password":"1234",
+            "email":"yandi@gmail.com",
+            "Emergency contact name":"Khotso",
+            "Emergency contact relationship":"Spouse",
+            "Emergency contact No":"123-456-7899"
+          },
+          {
+            "name": "Bob Smith",
+            "workRole": "Project Manager",
+            "department": "Project Management",
+            "address": "456 Elm Street, Springfield, IL",
+            "phone": "987-654-3210",
+            "profilePic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.mnp.ca%2F-%2Fmedia%2Ffoundation%2Fintegrations%2Fpersonnel%2F2020%2F12%2F16%2F13%2F57%2Fpersonnel-image-4483.jpg%3Fh%3D800%26w%3D600%26hash%3D9D5E5FCBEE00EB562DCD8AC8FDA8433D&tbnid=IdKrAjK_U4jq5M&vet=12ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygPegUIARCTAQ..i&imgrefurl=https%3A%2F%2Fwww.mnp.ca%2Fen%2Fpersonnel%2Fstuart-person&docid=D7KCaxjIGFyMTM&w=600&h=800&q=person&ved=2ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygPegUIARCTAQ",
+            "IdNo":"163252453243",
+            "EmployeeID":"2",
+            "Gender":"Male",
+            "password":"1244",
+            "email":"yande@gmail.com",
+            "Emergency contact name":"Katlego",
+            "Emergency contact relationship":"Sibling",
+            "Emergency contact No":"123-456-7699"         
+          },
+          {
+            "name": "Carol Lee",
+            "workRole": "Data Analyst",
+            "department": "Data Science",
+            "address": "789 Oak Street, Springfield, IL",
+            "phone": "555-555-5555",
+            "profilePic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fengineering.unl.edu%2Fimages%2Fstaff%2FKayla-Person.jpg&tbnid=r4kykPUijMfl_M&vet=12ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygRegUIARCXAQ..i&imgrefurl=https%3A%2F%2Fengineering.unl.edu%2Fkayla-person%2F&docid=ap6GPr-70tOAyM&w=600&h=800&q=person&ved=2ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMygRegUIARCXAQ",
+            "IdNo":"163982453243",
+            "EmployeeID":"3",
+            "Gender":"Female",
+            "password":"1235",
+            "email":"yandiwe@gmail.com",
+            "Emergency contact name":"Kelly",
+            "Emergency contact relationship":"Spouse",
+            "Emergency contact No":"123-365-7899"
+          },
+          {
+            "name": "David Brown",
+            "workRole": "HR Specialist",
+            "department": "Human Resources",
+            "address": "321 Pine Street, Springfield, IL",
+            "phone": "444-444-4444",
+            "profilePic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fakm-img-a-in.tosshub.com%2Findiatoday%2Fimages%2Fstory%2Fmedia_bank%2F202309%2Felon-musk-252648408-16x9.jpg%3FVersionId%3D9KYZpqpoY3WvH8eVZg54mmkpTGfvPCWj%26size%3D690%3A388&tbnid=n3oEdOpAfH4MMM&vet=12ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMyhHegUIARCTAg..i&imgrefurl=https%3A%2F%2Fwww.indiatoday.in%2Ftechnology%2Fnews%2Fstory%2Felon-musk-is-not-a-very-nice-person-and-did-not-treat-people-well-says-ex-tesla-ceo-2440311-2023-09-25&docid=JpsFHceVAunn-M&w=690&h=388&q=person&ved=2ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMyhHegUIARCTAg",
+            "IdNo":"163982453983",
+            "EmployeeID":"4",
+            "Gender":"Male",
+            "password":"1236",
+            "email":"yandoooo@gmail.com",
+            "Emergency contact name":"Mandy",
+            "Emergency contact relationship":"Spouse",
+            "Emergency contact No":"123-196-7899"
+          },
+          {
+            "name": "Emily Davis",
+            "workRole": "Marketing Coordinator",
+            "department": "Marketing",
+            "address": "654 Cedar Street, Springfield, IL",
+            "phone": "333-333-3333",
+            "profilePic":"https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.zeiss.co.za%2Fcontent%2Fdam%2Fvis-b2c%2Freference-master%2Fimages%2Fbetter-vision%2Flifestyle-fashion%2Fa-person-s-spectacles-reflect-their-character%2Fnew_a-persons-spectacles-reflect-their-character.jpg&tbnid=-pePp6uvnJtDBM&vet=12ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMyheegUIARDIAg..i&imgrefurl=https%3A%2F%2Fwww.zeiss.co.za%2Fvision-care%2Feye-health-and-care%2Flifestyle-fashion%2Fa-persons-spectacles-reflect-their-character.html&docid=9XBXKI09Fnk4HM&w=1920&h=1282&q=person&ved=2ahUKEwiblb_ct9qFAxX-UqQEHSvQCpEQMyheegUIARDIAg",
+            "IdNo":"164082453983",
+            "EmployeeID":"5",
+            "Gender":"Female",
+            "password":"1238",
+            "email":"yanduuuuu@gmail.com",
+            "Emergency contact name":"Brandy",
+            "Emergency contact relationship":"Spouse",
+            "Emergency contact No":"123-186-7899"
+          }
+    ]
+}
+
