@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
     navTitle: string = 'Employee Management';
-    userName: string = '';
-    userImg: string = '';
+    userName: string = 'admin';
+    userImg: string = 'https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg';
 
     
 }

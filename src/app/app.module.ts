@@ -6,17 +6,24 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
+import { AllEmployeesComponent } from './components/all-employees/all-employees.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminDashboardComponent,
+    AllEmployeesComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
