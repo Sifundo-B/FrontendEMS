@@ -6,6 +6,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PaySlipComponent } from './pages/pay-slip/pay-slip.component';
+import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-dashboard.component';
+
 
 const routes: Routes = [
   { path: '' , component: LandingPageComponent},
@@ -15,10 +17,9 @@ const routes: Routes = [
   {path: 'side-bar', component: SideBarComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: '', component: LoginComponent},
-  {path: 'paySlip', component: PaySlipComponent}
-
+  {path: 'paySlip', component: PaySlipComponent},
+  {path:'', component: EmployeeDashboardComponent},
 ];
-
 
 
 @NgModule({

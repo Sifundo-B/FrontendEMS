@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 
 
-import { NavigationComponent } from './components/navigation/navigation.component';
+//import { NavigationComponent } from './components/navigation/navigation.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
@@ -21,14 +21,18 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
+    //NavigationComponent,
     SideBarComponent,
     PaySlipComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    EmployeeDashboardComponent
   ],
   imports: [
     BrowserModule,
