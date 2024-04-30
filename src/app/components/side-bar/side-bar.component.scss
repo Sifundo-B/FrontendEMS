@@ -1,102 +1,55 @@
-// body{
-//     margin: 0;
-//      padding: 0; 
-//      background-color: black;
-     
-//   }
-
-.sideBar{
+.side-bar{
+    padding: 0;
+    margin: 0;
     width: 100%;
-}
-  button{
-    border: 0;
-    margin-bottom: 10%;
     background-color: white;
-  }
-
-//  .container{
-//      width: 100%;
-//      height: 600px;
-//      background-color:black;
-//      margin-top: 100px;
-//      margin-left: 0;
-//  }
-
-.sideBar{
-    width: 20%;
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
     height: 100%;
-    margin-top: 100px;
-    
-    margin-right: 80%;
-    //position: relative;
-    border: 1px solid #F1DDFF;
+    border-right: 2px solid var(--dim-purple);
+    border-top: 2px solid var(--dim-purple);
 
+
+    .link{
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        align-items: top;
+        font-size: large;
+        color: #808080;
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 8px;
+    }
+
+    .link p{
+        font-size: small;
+        margin-top: 12px;
+    }
+
+    .top, .bottom .link{
+        margin-left: 2rem;
+    }
+
+    .bottom{
+        position: absolute;
+        bottom: 0;
+        border-top: 2px solid var(--dim-purple);
+        width: 100%;
+    }
+
+    .link:hover{
+        background-color: var(--dim-purple);
+        cursor: pointer;
+        color: var(--btn-color);
+    }
+
+    .link:active{
+        color: var(--btn-color);
+        background-color: var(--dim-purple);
+    }
 }
-
-.HomeIcon{
-width: 10%;     
-height: 5%;
-margin-left: 5%;
-border-radius: 50%;
-
-} 
-.payIcon{
-    width: 10%;     
-    height: 5%;
-    margin-left: 5%;
-    border-radius: 50%;
-    background-color: white;
-}
-
- .empMan{
-     color: var(--divColor);
-     width: 100%;
- }
-
- .pay{
-     color: var(--divColor);
-     width: 100%;
- }
-
- .update{
-     color: var(--divColor);
-     width: 100%;
- }
-
-.empIcon{
-    width: 10%;     
-    height: 5%;
-    margin-left: 5%;
-    border-radius: 50%;
-    background-color: white;
-}
-.updateIcon{
-    width: 10%;     
-    height: 5%;
-    margin-left: 5%;
-    border-radius: 50%;
-    background-color: white;
-    
-}
-
-.logOutIcon{
-    width: 10%;     
-    height: 5%;
-    margin-left: 5%;
-    border-radius: 50%;
-    background-color: white;
-    
-}
-
-.logOut{
-    margin-top: 450px;
-    color: var(--divColor);
-    width: 100%;
-}
-
-.home{
-    color: var(--divColor);
-}
-
-
 
