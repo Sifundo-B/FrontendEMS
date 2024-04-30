@@ -30,16 +30,24 @@ export class loginComponent
      this.http.get<any>('http://localhost:3000/employeeData')
      .subscribe(response=>{
      const theUser = response.find((details:any)=>
-     {
-      return details.email === this.loginForm.value.email && details.password === this.loginForm.value.password;
-    });
-    if(theUser){
+      details.email === this.loginForm.value.email && details.password === this.loginForm.value.password);
+  
+    const  theAdmin =response.find((details:any)=>
+     details.email === this.loginForm.value.email && details.password === this.loginForm.value.password);
+  
+    if (theUser.email === "david@gmail.com" && theUser.password === "1236"){
         this.userService.setCurrentUser(theUser);
         this.loginForm.reset()
         this.router.navigate(["/emp-dashboard"])
+      
+      }else if(theUser){
+         this.userService.setCurrentUser(theUser);
+         this.loginForm.reset()
+         this.router.navigate(["/emp-dashboard"])
       }else{
         alert("User not found")
       }
+    
       },err=>{
        alert("Something went wrong");
     })

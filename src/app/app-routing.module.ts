@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'registration', component: RegistrationComponent  },
   { path: 'dashboard' , component: AdminDashboardComponent},
   {path: 'side-bar', component: SideBarComponent},
+  {path: 'landing-page', component:LandingPageComponent},
   // {path: 'dashboard', component: DashboardComponent},
   {path: 'paySlip', component: PaySlipComponent},
   {path:'emp-dashboard', component: EmployeeDashboardComponent},
