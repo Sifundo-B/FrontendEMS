@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { employeeData } from 'src/app/interfaces/employeeData';
 import { EmployeeService } from 'src/app/services/employee.service';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 
 @Component({
@@ -11,9 +12,9 @@ import { EmployeeService } from 'src/app/services/employee.service';
 })
 export class EmployeeDashboardComponent {
 
-  data: any[] = [];
+  data: any[] = [this.userService.getCurrentUser()];
 
-  constructor(private http : HttpClient , private employee : EmployeeService) {}
+  constructor(private http : HttpClient , private employee : EmployeeService, private userService: EmployeesService) {}
 
   ngOnInit(): void {
     this.getEmployeeData();
