@@ -2,6 +2,8 @@
     width: 100%;
     margin: 0;
     padding: 0;
+    height: 100vh;
+
 }
 
 .dash-nav{
@@ -11,4 +13,8 @@
 .main-dash{
     display: grid;
     grid-template-columns: 20% 80%;
+}
+
+.dash-side-bar{
+    height: 100vh;
 }
