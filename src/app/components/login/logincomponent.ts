@@ -43,5 +43,6 @@ export class loginComponent
       },err=>{
        alert("Something went wrong");
     })
+
  }
 }

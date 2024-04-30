@@ -28,4 +28,10 @@ export class EmployeesService {
     return this.currentUser;
   }
   
+  setCurrentUser(user: any) {
+    this.currentUser = user;
+  }
+  getCurrentUser() {
+    return this.currentUser;
+  }
 }
