@@ -8,6 +8,7 @@ import { Employee } from '../interfaces/employee';
 })
 export class EmployeesService {
   private apiUrl: string = 'http://localhost:3000/employeeData';
+  private user: any;
 
   constructor(private http: HttpClient) { }
   
@@ -17,6 +18,14 @@ export class EmployeesService {
 
   deleteEmployee(employee: any): Observable<any>{
     return this.http.delete<any>(`${this.apiUrl}/${employee.id}`)
+  }
+
+  setCurrentuser(user: any){
+    this.user = user;
+  }
+
+  getCurrentUser(){
+    return this.user;
   }
   
 }

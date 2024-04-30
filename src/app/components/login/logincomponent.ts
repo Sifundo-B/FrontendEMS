@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { EmployeesService } from 'src/app/services/employees.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class loginComponent
 
   public loginForm !: FormGroup
 
-  constructor(private formBuilder: FormBuilder,private http:HttpClient, private router: Router){ }
+  constructor(private formBuilder: FormBuilder,private http:HttpClient, private router: Router, private userService: EmployeesService){ }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -38,6 +39,7 @@ export class loginComponent
         this.router.navigate(["/dashboard"])
       
       }else if(theUser){
+         this.userService.setCurrentuser(theUser);
          this.loginForm.reset()
          this.router.navigate(["/emp-dashboard"])
       }else{
