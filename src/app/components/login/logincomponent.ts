@@ -33,12 +33,14 @@ export class loginComponent
     });
     if(theUser){
         this.loginForm.reset()
-        this.router.navigate(["/dashboard"])
-      }else{
+        this.router.navigate(["/emp-dashboard"])
+      }
+      else{
         alert("User not found")
       }
       },err=>{
        alert("Something went wrong");
     })
+
  }
 }
