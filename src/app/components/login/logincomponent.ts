@@ -38,7 +38,7 @@ export class loginComponent
     if (theUser.email === "david@gmail.com" && theUser.password === "1236"){
         this.userService.setCurrentUser(theUser);
         this.loginForm.reset()
-        this.router.navigate(["/emp-dashboard"])
+        this.router.navigate(["/dashboard"])
       
       }else if(theUser){
          this.userService.setCurrentUser(theUser);

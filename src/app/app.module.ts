@@ -18,7 +18,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NavigationComponent} from './components/navigation/navigation.component'
+import { NavigationComponent} from './components/navigation/navigation.component';
+
+import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,8 @@ import { NavigationComponent} from './components/navigation/navigation.component
     DashboardComponent,
     NavigationComponent,
     loginComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    UpdateEmpComponent
   ],
   imports: [
     BrowserModule,

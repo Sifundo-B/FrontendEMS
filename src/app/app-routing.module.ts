@@ -8,6 +8,7 @@ import { PaySlipComponent } from './pages/pay-slip/pay-slip.component';
 import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-dashboard.component';
 import { loginComponent } from './components/login/logincomponent';
 import { RegistrationComponent } from './registration/registration.component';
+import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   // {path: 'dashboard', component: DashboardComponent},
   {path: 'paySlip', component: PaySlipComponent},
   {path:'emp-dashboard', component: EmployeeDashboardComponent},
+  {path: 'update-emp', component: UpdateEmpComponent}
 ];
 
 

@@ -1,4 +1,4 @@
-<div class="navigation-bar">
+<div class="navigation-bar" *ngFor="let employee of data">
     <div class="left-nav">
         <svg width="301" height="76" viewBox="0 0 301 76" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_40_5" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="19" y="0" width="75" height="76">
@@ -23,13 +23,13 @@
             </svg>
 
             <div>
-                <h3 class="nav-title">{{navTitle}}</h3>
+                <h3 class="nav-title"></h3>
                 <p>manage employees and details</p>
             </div>
     </div>
         
     <div class="user-info">
-        <p>{{userName}}</p>
-        <img src="{{userImg}}" alt="userPicture">
+        <p>{{employee.name}} {{employee.surname}}</p>
+        <img src="{{employee.imgUrl}}" alt="userPicture">
     </div>
 </div>
