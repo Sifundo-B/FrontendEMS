@@ -8,9 +8,10 @@
     flex-direction: column;
     justify-content: center;
     position: relative;
+    border-right: 2px solid #f1ddff;
     height: 100%;
     //border-right: 2px solid var(--dim-purple);
-    border-top: 2px solid var(--dim-purple);
+    //border-top: 2px solid var(--dim-purple);
 
 
     .link{
@@ -26,12 +27,12 @@
     }
 
     .link p{
-        font-size: small;
+        //font-size: small;
         margin-top: 12px;
     }
 
     .top, .bottom .link{
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .bottom{

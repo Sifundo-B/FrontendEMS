@@ -2,7 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 0 4px rgb(209, 208, 208);
+    //box-shadow: 0 0 4px rgb(209, 208, 208);
+    border: 2px solid #f1ddff;
+    width: 100vw;
 }
 
 .left-nav{

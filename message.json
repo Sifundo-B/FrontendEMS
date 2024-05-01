@@ -1,7 +1,7 @@
 {
   "employeeData": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Alice",
       "surname": "Johnson",
       "idNo": "163252453243",
@@ -19,7 +19,7 @@
       "emergencyContactNo": "123-456-7899"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Bob",
       "surname": "Smith",
       "idNo": "163252453243",
@@ -37,7 +37,7 @@
       "emergencyContactNo": "123-456-7699"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Carol",
       "surname": "Lee",
       "idNo": "163982453243",
@@ -53,6 +53,44 @@
       "emergencyContactName": "Kelly",
       "emergencyContactRelationship": "Spouse",
       "emergencyContactNo": "123-365-7899"
+    },
+    {
+      "id": "4",
+      "name": "David",
+      "surname": "Brown",
+      "type": "theAdmin",
+      "idNo": "163982453983",
+      "workRole": "HR Specialist",
+      "department": "Human Resources",
+      "address": "321 Pine Street, Springfield, IL",
+      "phone": "444-444-4444",
+      "imgUrl": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/media_bank/202309/elon-musk-252648408-16x9.jpg?VersionId=9KYZpqpoY3WvH8eVZg54mmkpTGfvPCWj&size=690:388",
+      "employeeId": "4",
+      "gender": "Male",
+      "password": "1236",
+      "email": "david@gmail.com",
+      "emergencyContactName": "Mandy",
+      "EemergencyContactRelationship": "Spouse",
+      "emergencyContactNo": "123-196-7899"
+    },
+    {
+      "id": "5",
+      "name": "Emily",
+      "surname": "Davis",
+      "type": "theUser",
+      "idNo": "164082453983",
+      "workRole": "Marketing Coordinator",
+      "department": "Marketing",
+      "address": "654 Cedar Street, Springfield, IL",
+      "phone": "333-333-3333",
+      "imgUrl": "https://www.zeiss.co.za/content/dam/vis-b2c/reference-master/images/better-vision/lifestyle-fashion/a-person-s-spectacles-reflect-their-character/new_a-persons-spectacles-reflect-their-character.jpg/_jcr_content/renditions/original.image_file.1920.960.0,161,1920,1121.file/new_a-persons-spectacles-reflect-their-character.jpg",
+      "employeeId": "5",
+      "gender": "Female",
+      "password": "1238",
+      "email": "emily@gmail.com",
+      "emergencyContactName": "Brandy",
+      "emergencyContactRelationship": "Spouse",
+      "emergencyContactNo": "123-186-7899"
     }
   ]
 }

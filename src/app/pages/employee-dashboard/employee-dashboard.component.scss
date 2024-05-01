@@ -5,8 +5,10 @@
 
 .dash {
     border: 2px solid #F1DDFF;
-    width: 80%;
-    height: 100%;
+    border-top: none;
+    border-left: none;
+    width: 80vw;
+    height: 100vh;
     //margin-top: 100px;
     margin-left: 20%;
     position: absolute;
@@ -88,3 +90,12 @@ img {
       width: 100%; 
     }
   }
+
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 23% 80%;
+    border: #F1DDFF;
+    border-top: none;
+}
