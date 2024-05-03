@@ -1,0 +1,21 @@
+img {
+
+    height: 100%;
+}
+.cont {
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    overflow: hidden;
+    position: fixed;
+}
+
+.pay{
+    height: 70%;
+    padding-top: 3%;
+    margin-left: 15%;
+
+
+}
+

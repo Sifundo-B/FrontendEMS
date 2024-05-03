@@ -9,6 +9,7 @@ import { EmployeeDashboardComponent } from './pages/employee-dashboard/employee-
 import { loginComponent } from './components/login/logincomponent';
 import { RegistrationComponent } from './registration/registration.component';
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
+import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 
 
 const routes: Routes = [
@@ -19,9 +20,10 @@ const routes: Routes = [
   {path: 'side-bar', component: SideBarComponent},
   {path: 'landing-page', component:LandingPageComponent},
   // {path: 'dashboard', component: DashboardComponent},
-  {path: 'paySlip', component: PaySlipComponent},
+  {path: 'pay-slip', component: PaySlipComponent},
   {path:'emp-dashboard', component: EmployeeDashboardComponent},
-  {path: 'update-emp', component: UpdateEmpComponent}
+  {path: 'update-emp', component: UpdateEmpComponent},
+  {path: 'tax-cert', component: TaxCertComponent}
 ];
 
 

@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent} from './components/navigation/navigation.component';
 
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
+import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { UpdateEmpComponent } from './components/update-emp/update-emp.component
     NavigationComponent,
     loginComponent,
     LandingPageComponent,
-    UpdateEmpComponent
+    UpdateEmpComponent,
+    TaxCertComponent
   ],
   imports: [
     BrowserModule,

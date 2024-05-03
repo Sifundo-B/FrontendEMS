@@ -1,0 +1,19 @@
+.cont{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    position: fixed;
+}
+
+img {
+    height: 100%;
+    width: 80%;
+}
+
+.tax{
+    height: 70%;
+    padding: 3%;
+    margin-left: 15%;
+}
