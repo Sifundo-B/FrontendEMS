@@ -1,147 +1,95 @@
 <app-navbar class="reg-nav"></app-navbar>
 <div class="cont">
+  
+
+<div class="container-outer">
   <app-side-bar></app-side-bar>
+  
+    <div class="container mt-5">
+      <div class="heading">
+        <h1>Update Employee Details</h1>
+      </div>
 
-<div class="container">
-    <div class="heading">
-      <h1>Update Employee Details</h1>
+      <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="inputName" class="form-label">First name</label>
+            <input formControlName="name" class="form-control" id="name" [(ngModel)]="currentEmployee.name">
+          </div>
+          <div class="col-md-6">
+            <label for="inputlastname" class="form-label">Last name</label>
+            <input formControlName="surname" class="form-control" id="lastname" [(ngModel)]="currentEmployee.surname">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="inputGender" class="form-label">Gender</label>
+            <input formControlName="gender" class="form-control" id="gender" [(ngModel)]="currentEmployee.gender">
+          </div>
+          <div class="col-md-6">
+            <label for="inputcellnumber" class="form-label">Cellphone number</label>
+            <input formControlName="phone" type="tel" class="form-control" id="cellnumber" [(ngModel)]="currentEmployee.phone">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="inputemailaddress" class="form-label">Email address</label>
+            <input formControlName="email" type="email" class="form-control" id="emailaddress" [(ngModel)]="currentEmployee.email">
+          </div>
+          <div class="col-md-6">
+            <label for="Address" class="form-label">Address</label>
+            <input formControlName="address" type="text" class="form-control" id="address" [(ngModel)]="currentEmployee.address">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="Id number" class="form-label">ID Number</label>
+            <input formControlName="id" type="text" class="form-control" id="id" [(ngModel)]="currentEmployee.idNo">
+          </div>
+          <div class="col-md-6">
+            <label for="employeeId" class="form-label">Employee ID</label>
+            <input formControlName="employeeId" type="text" class="form-control" id="employeeId " [(ngModel)]="currentEmployee.employeeId">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input formControlName="password" type="password" class="form-control" id="password" [(ngModel)]="currentEmployee.password">
+          </div>
+          <div class="col-md-6">
+            <label for="department" class="form-label">Department</label>
+            <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="position" class="form-label">Position</label>
+            <input formControlName="workRole" type="text" class="form-control" id="position" [(ngModel)]="currentEmployee.workRole">
+          </div>
+          <div class="col-md-6">
+            <label for="emergencyName" class="form-label">Emergency contact name</label>
+            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName" [(ngModel)]="currentEmployee.emergencyContactName">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
+            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship" [(ngModel)]="currentEmployee.emergencyContactRelationship">
+          </div>
+          <div class="col-md-6">
+            <label for="emergencynumber" class="form-label">Emergency contact number</label>
+            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencynumber" [(ngModel)]="currentEmployee.emergencyContactNo">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 buttons-sub">
+            <p class="sucessfull-p">User successfully updated!</p>
+            <button type="submit" class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </form>
     </div>
-
-    <form class="row 3">
-      <div class="col1">
-        <label for="inputName" class="form-label">First name</label>
-        <input
-          name="name"
-          class="form-control"
-          id="name"
-          placeholder=""
-        />
-      </div>
-
-      <div class="col2">
-        <label for="inputlastname" class="form-label">Last name</label>
-        <input
-          name="lastname"
-          class="form-control"
-          id="lastname"
-          
-        />
-      </div>
-
-      <div class="col3">
-        <label for="inputGender" class="form-label">Gender</label>
-        <input
-          name="gender"
-          class="form-control"
-          id="gender"
-        />
-      </div>
-
-      <div class="col4">
-        <label for="inputcellnumber" class="form-label">Cellphone number</label>
-        <input
-          type="cellnumber"
-          class="form-control"
-          id="cellnumber"
-        />
-      </div>
-
-      <div class="col5">
-        <label for="inputemailaddress" class="form-label">Email address</label>
-        <input
-          type="emailaddress"
-          class="form-control"
-          id="emailaddress"
-        />
-      </div>
-
-      <div class="col6">
-        <label for="Address" class="form-label">Address</label>
-        <input
-          type="Address"
-          class="form-control"
-          id="address"
-        />
-      </div>
-
-      <div class="col7">
-        <label for="Id number" class="form-label">ID Number</label>
-        <input
-          type="Id number"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col8">
-        <label for="employeeId" class="form-label">Employee ID</label>
-        <input
-          type="employeeId"
-          class="form-control"
-          id="employeeId"
-        />
-      </div>
-
-      <div class="col19">
-        <label for="employeeId" class="form-label">Password</label>
-        <input
-          type="employeeId"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col10">
-        <label for="department" class="form-label">Department</label>
-        <input
-          type="department"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col15">
-        <label for="position" class="form-label">Position</label>
-        <input
-          type="position"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col11">
-        <label for="emergncy name" class="form-label"
-          >Emergency contact name</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col12">
-        <label for="emergencyrelationship" class="form-label"
-          >Emergency contact relationship</label
-        >
-        <input
-          type="text"
-          class="form-control"
-          id="id"
-        />
-      </div>
-
-      <div class="col13">
-        <label for="emergencynumber" class="form-label"
-          >Emergency contact number</label
-        >
-        <input type="tel" class="form-control" id="id" />
-      </div>
-
-      
-    </form>
-    <div class="col14">
-      <button id="btn" >Update</button>
-    </div>
+    
+  
   </div>
 </div>

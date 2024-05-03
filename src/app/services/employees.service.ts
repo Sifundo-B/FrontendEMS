@@ -21,11 +21,19 @@ export class EmployeesService {
   }
 
   setCurrentUser(user: any){
-    this.currentUser = user;
+    localStorage.clear();
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    // this.currentUser = user;
   }
 
   getCurrentUser(){
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     return this.currentUser;
   }
+
+  updateEmployee(id: any, data: any): Observable<any>{
+    return this.http.patch<any>(`${this.apiUrl}/${id}`, data)
+  }
+  
   
 }

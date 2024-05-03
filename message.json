@@ -23,7 +23,7 @@
       "name": "Bob",
       "surname": "Smith",
       "idNo": "163252453243",
-      "workRole": "Project Manager",
+      "workRole": "Developer",
       "department": "Project Management",
       "address": "456 Elm Street, Springfield, IL",
       "phone": "987-654-3210",
@@ -32,7 +32,7 @@
       "gender": "Male",
       "password": "1244",
       "email": "bob@gmail.com",
-      "emergencyContactName": "Katlego",
+      "emergencyContactName": "Khotso",
       "emergencyContactRelationship": "Sibling",
       "emergencyContactNo": "123-456-7699"
     },
@@ -50,8 +50,8 @@
       "gender": "Female",
       "password": "1235",
       "email": "carol@gmail.com",
-      "emergencyContactName": "Kelly",
-      "emergencyContactRelationship": "Spouse",
+      "emergencyContactName": "Kimmy",
+      "emergencyContactRelationship": "Friend",
       "emergencyContactNo": "123-365-7899"
     },
     {
@@ -72,25 +72,6 @@
       "emergencyContactName": "Mandy",
       "EemergencyContactRelationship": "Spouse",
       "emergencyContactNo": "123-196-7899"
-    },
-    {
-      "id": "5",
-      "name": "Emily",
-      "surname": "Davis",
-      "type": "theUser",
-      "idNo": "164082453983",
-      "workRole": "Marketing Coordinator",
-      "department": "Marketing",
-      "address": "654 Cedar Street, Springfield, IL",
-      "phone": "333-333-3333",
-      "imgUrl": "https://www.zeiss.co.za/content/dam/vis-b2c/reference-master/images/better-vision/lifestyle-fashion/a-person-s-spectacles-reflect-their-character/new_a-persons-spectacles-reflect-their-character.jpg/_jcr_content/renditions/original.image_file.1920.960.0,161,1920,1121.file/new_a-persons-spectacles-reflect-their-character.jpg",
-      "employeeId": "5",
-      "gender": "Female",
-      "password": "1238",
-      "email": "emily@gmail.com",
-      "emergencyContactName": "Brandy",
-      "emergencyContactRelationship": "Spouse",
-      "emergencyContactNo": "123-186-7899"
     }
   ]
 }
