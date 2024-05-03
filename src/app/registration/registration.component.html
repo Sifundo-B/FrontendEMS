@@ -8,17 +8,17 @@
   </div>
   
   
-      <form class="row 3" >
+      <form class="row 3"#Info="ngForm" (ngSubmit)="NewEmployee(Info.value)">
   
         
           <div class="col1">
             <label for="inputName" class="form-label">First name</label>
-            <input name="name" class="form-control" id="name" placeholder="Employee name" >
+            <input class="form-control" id="name" placeholder="Employee name" name="name"ngModel>
           </div>
          
           <div class="col2">
               <label for="inputlastname" class="form-label">Last name</label>
-              <input name="lastname" class="form-control" id="lastname" placeholder="Employee surname" >
+              <input class="form-control" id="lastname" placeholder="Employee surname"  name="Surname"ngModel>
             </div>
       
       
@@ -30,68 +30,68 @@
       
             <div class="col4">
               <label for="inputcellnumber" class="form-label">Cellphone number</label>
-              <input type="cellnumber" class="form-control" id="cellnumber" placeholder="Enter cell number" >
+              <input type="cellnumber" class="form-control" id="cellnumber" placeholder="Enter cell number"  name="phone"ngModel>
             </div>
       
       
   
             <div class="col5">
               <label for="inputemailaddress" class="form-label">Email address</label>
-              <input type="emailaddress" class="form-control" id="emailaddress" placeholder="Enter email address">
+              <input type="emailaddress" class="form-control" id="emailaddress" placeholder="Enter email address" name="email"ngModel>
             </div>
           
             <div class="col6">
               <label for="Address" class="form-label">Address</label>
-              <input type="Address" class="form-control" id="address" placeholder="Enter Address" >
+              <input type="Address" class="form-control" id="address" placeholder="Enter Address"  name="address"ngModel>
             </div>
           
   
             <div class="col7">
               <label for="Id number" class="form-label">ID Number</label>
-              <input type="Id number" class="form-control" id="id" placeholder="Id number" >
+              <input type="Id number" class="form-control" id="id" placeholder="Id number"  name="idNo"ngModel>
             </div>
   
             <div class="col8">
               <label for="employeeId" class="form-label">Employee ID</label>
-              <input type="employeeId" class="form-control" id="employeeId" placeholder="Employee Id" >
+              <input type="employeeId" class="form-control" id="employeeId" placeholder="Employee Id"  name="employeeId"ngModel>
             </div>
           
             
           
           
             <div class="col19">
-              <label for="employeeId" class="form-label">Password</label>
-              <input type="employeeId" class="form-control" id="id" placeholder="employee Id">
+              <label for="employPositioneeId" class="form-label">Password</label>
+              <input type="employeeId" class="form-control" id="id" placeholder="password" name="password"ngModel>
             </div>
           
         
         <div class="col10">
       <label for="department" class="form-label">Department</label>
-      <input type="department" class="form-control" id="id" placeholder="Department" >
+      <input type="department" class="form-control" id="id" placeholder="Department" name="department"ngModel >
     </div>
   
     <div class="col15">
       <label for="position" class="form-label">Position</label>
-      <input type="position" class="form-control" id="id" placeholder="Enter position">
+      <input type="position" class="form-control" id="id" placeholder="Enter position" name="workRole"ngModel>
     </div>
   
     <div class="col11">
       <label for="emergncy name" class="form-label">Emergency contact name</label>
-      <input type="emergency name" class="form-control" id="id" placeholder="Emergency contact name">
+      <input type="emergency name" class="form-control" id="id" placeholder="Emergency contact name" name="emergencyContactName"ngModel>
     </div>
   
     <div class="col12">
       <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-      <input type="emergencyrelationship" class="form-control" id="id" placeholder="Emergency contact relationship">
+      <input type="emergencyrelationship" class="form-control" id="id" placeholder="Emergency contact relationship" name="emergencyContactRelationship"ngModel>
     </div>
   
     <div class="col13">
       <label for="emergencynumber" class="form-label">Emergency contact number</label>
-      <input type="emergencynumber" class="form-control" id="id" placeholder="Emergency contact number">
+      <input type="emergencynumber" class="form-control" id="id" placeholder="Emergency contact number" name="emergencyContactNumber"ngModel>
     </div>
   
           <div class="col14">
-              <button id="btn">Submit</button>
+              <button id="btn" routerLink="/dashboard">Submit</button>
                </div>
              </form>
           </div>
