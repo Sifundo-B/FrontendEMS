@@ -1,12 +1,16 @@
 <div class="side-bar">
     <div class="top">
         <a class="link" routerLink="/emp-dashboard">
-            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-image-portrait"></i>
             <p>Profile</p>
         </a>
         <a class="link" routerLink="/pay-slip">
             <i class="fa-solid fa-file"></i>
             <p>Pay Slip</p>
+        </a>
+        <a class="link" routerLink="/dashboard" *ngIf="currentUser.email == 'david@gmail.com'">
+            <i class="fa-solid fa-file"></i>
+            <p>Employee Management</p>
         </a>
         <a class="link" routerLink="/tax-cert">
             <i class="fa-solid fa-file"></i>
