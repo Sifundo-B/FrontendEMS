@@ -28,8 +28,8 @@
             </div>
     </div>
         
-    <div class="user-info">
-        <p>{{employee.name}} {{employee.surname}}</p>
-        <img src="{{employee.imgUrl}}" alt="userPicture">
+    <div class="user-info" *ngFor="let emp of data">
+        <p>{{emp.name}} {{emp.surname}}</p>
+        <img src="{{emp.imgUrl}}" alt="userPicture">
     </div>
 </div>
