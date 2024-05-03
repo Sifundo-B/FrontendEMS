@@ -12,6 +12,7 @@ import { UpdateEmpComponent } from './components/update-emp/update-emp.component
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 
 
+
 const routes: Routes = [
   { path: '' , component: LandingPageComponent},
   { path: 'login', component: loginComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'pay-slip', component: PaySlipComponent},
   {path:'emp-dashboard', component: EmployeeDashboardComponent},
   {path: 'update-emp', component: UpdateEmpComponent},
-  {path: 'tax-cert', component: TaxCertComponent}
+  {path: 'tax-cert', component: TaxCertComponent},
+  
 ];
 
 

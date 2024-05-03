@@ -22,6 +22,8 @@ import { NavigationComponent} from './components/navigation/navigation.component
 
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
+import { MockSideComponent } from './components/mock-side/mock-side.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +41,9 @@ import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
     loginComponent,
     LandingPageComponent,
     UpdateEmpComponent,
-    TaxCertComponent
+    TaxCertComponent,
+    MockSideComponent,
+    
   ],
   imports: [
     BrowserModule,
