@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class GetEmployeeDataService {
 
   //API goes here, but for now we using json file 
-  private url = 'http://localhost:3000/employeeData';
+  private url = 'http://localhost:8090/api/employees';
 
   constructor(private http: HttpClient) {}
   //Function for getting employees

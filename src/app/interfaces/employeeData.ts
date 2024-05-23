@@ -1,11 +1,11 @@
 export interface employeeData {
     "id": any,
-    "name": any,
-    "surname": any
+    "first_name": any,
+    "last_name": any,
     "workRole": any,
     "department": any,
     "address": any,
-    "phone": any,
+    "phone_number": any,
     "imgUrl":any,
     "idNo":any,
     "employeeId":any

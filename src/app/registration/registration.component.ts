@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent {
+  private baseUrl = 'http://localhost:8090/api/employees';
   constructor(private http: HttpClient) {}
 
   NewEmployee(employees: {
@@ -27,8 +28,9 @@ export class RegistrationComponent {
     emergencyContactRelationship: any;
     emergencyContactNo: any;
   }) {
+    
     console.log(employees);
-    this.http.post('http://localhost:3000/employeeData',employees).subscribe((res) => {
+    this.http.post(`{${this.baseUrl}/employeeData`,employees).subscribe((res) => {
         console.log(res);
       });
   }
