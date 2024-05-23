@@ -1,102 +1,29 @@
-<app-navbar class="reg-nav"></app-navbar>
-
-<div class="cont">
-  <app-side-bar></app-side-bar>
-  <div class="container">
-    <div class="heading">
-   <h1>Register Employee</h1>
-  </div>
-  
-  
-      <form class="row 3"#Info="ngForm" (ngSubmit)="NewEmployee(Info.value)">
-  
-        
-          <div class="col1">
-            <label for="inputName" class="form-label">First name</label>
-            <input class="form-control" id="name" placeholder="Employee name" name="name"ngModel>
-          </div>
-         
-          <div class="col2">
-              <label for="inputlastname" class="form-label">Last name</label>
-              <input class="form-control" id="lastname" placeholder="Employee surname"  name="Surname"ngModel>
-            </div>
-      
-      
-            <div class="col3">
-              <label for="inputGender" class="form-label">Gender</label>
-              <input name="gender" class="form-control" id="gender" placeholder="Enter gender" >
-            </div>
-      
-      
-            <div class="col4">
-              <label for="inputcellnumber" class="form-label">Cellphone number</label>
-              <input type="cellnumber" class="form-control" id="cellnumber" placeholder="Enter cell number"  name="phone"ngModel>
-            </div>
-      
-      
-  
-            <div class="col5">
-              <label for="inputemailaddress" class="form-label">Email address</label>
-              <input type="emailaddress" class="form-control" id="emailaddress" placeholder="Enter email address" name="email"ngModel>
-            </div>
-          
-            <div class="col6">
-              <label for="Address" class="form-label">Address</label>
-              <input type="Address" class="form-control" id="address" placeholder="Enter Address"  name="address"ngModel>
-            </div>
-          
-  
-            <div class="col7">
-              <label for="Id number" class="form-label">ID Number</label>
-              <input type="Id number" class="form-control" id="id" placeholder="Id number"  name="idNo"ngModel>
-            </div>
-  
-            <div class="col8">
-              <label for="employeeId" class="form-label">Employee ID</label>
-              <input type="employeeId" class="form-control" id="employeeId" placeholder="Employee Id"  name="employeeId"ngModel>
-            </div>
-          
-            
-          
-          
-            <div class="col19">
-              <label for="employPositioneeId" class="form-label">Password</label>
-              <input type="employeeId" class="form-control" id="id" placeholder="password" name="password"ngModel>
-            </div>
-          
-        
-        <div class="col10">
-      <label for="department" class="form-label">Department</label>
-      <input type="department" class="form-control" id="id" placeholder="Department" name="department"ngModel >
+<div>
+  <h2>Add Employee</h2>
+  <form (submit)="addEmployee()">
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    <!-- form fields for employee data -->
+    <div>
+      <label for="firstName">First Name:</label>
+      <input id="firstName" [(ngModel)]="newEmployee.firstName" name="firstName" required />
     </div>
-  
-    <div class="col15">
-      <label for="position" class="form-label">Position</label>
-      <input type="position" class="form-control" id="id" placeholder="Enter position" name="workRole"ngModel>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" [(ngModel)]="newEmployee.lastName" name="lastName" required />
     </div>
-  
-    <div class="col11">
-      <label for="emergncy name" class="form-label">Emergency contact name</label>
-      <input type="emergency name" class="form-control" id="id" placeholder="Emergency contact name" name="emergencyContactName"ngModel>
+    <!-- Add other form fields similarly -->
+    <div>
+      <label for="department">Department:</label>
+      <select id="department" [(ngModel)]="newEmployee.department" name="department" required>
+        <option *ngFor="let dept of departments" [ngValue]="dept">{{ dept.DepartmentName }}</option>
+      </select>
     </div>
-  
-    <div class="col12">
-      <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-      <input type="emergencyrelationship" class="form-control" id="id" placeholder="Emergency contact relationship" name="emergencyContactRelationship"ngModel>
+    <div>
+      <label for="position">Position:</label>
+      <select id="position" [(ngModel)]="newEmployee.position" name="position" required>
+        <option *ngFor="let pos of positions" [ngValue]="pos">{{ pos.positionName }}</option>
+      </select>
     </div>
-  
-    <div class="col13">
-      <label for="emergencynumber" class="form-label">Emergency contact number</label>
-      <input type="emergencynumber" class="form-control" id="id" placeholder="Emergency contact number" name="emergencyContactNumber"ngModel>
-    </div>
-  
-          <div class="col14">
-              <button id="btn" routerLink="/dashboard">Submit</button>
-               </div>
-             </form>
-          </div>
-
-
-  
-
-   
+    <button type="submit">Add Employee</button>
+  </form>
+</div>

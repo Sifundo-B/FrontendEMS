@@ -27,7 +27,7 @@ export class UpdateEmpComponent {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     this.employee.getEmployees().subscribe((emp) => {
-      this.data = emp
+      // this.data = emp
       this.setCurrentUser()
       console.log(this.data)
       console.log(this.currentEmployee)
