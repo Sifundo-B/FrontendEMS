@@ -1,102 +1,219 @@
-<app-navbar class="reg-nav"></app-navbar>
-
-<div class="cont">
-  <app-side-bar></app-side-bar>
-  <div class="container">
-    <div class="heading">
-   <h1>Register Employee</h1>
-  </div>
-  
-  
-      <form class="row 3"#Info="ngForm" (ngSubmit)="NewEmployee(Info.value)">
-  
-        
-          <div class="col1">
-            <label for="inputName" class="form-label">First name</label>
-            <input class="form-control" id="name" placeholder="Employee name" name="name"ngModel>
-          </div>
-         
-          <div class="col2">
-              <label for="inputlastname" class="form-label">Last name</label>
-              <input class="form-control" id="lastname" placeholder="Employee surname"  name="Surname"ngModel>
-            </div>
-      
-      
-            <div class="col3">
-              <label for="inputGender" class="form-label">Gender</label>
-              <input name="gender" class="form-control" id="gender" placeholder="Enter gender" >
-            </div>
-      
-      
-            <div class="col4">
-              <label for="inputcellnumber" class="form-label">Cellphone number</label>
-              <input type="cellnumber" class="form-control" id="cellnumber" placeholder="Enter cell number"  name="phone"ngModel>
-            </div>
-      
-      
-  
-            <div class="col5">
-              <label for="inputemailaddress" class="form-label">Email address</label>
-              <input type="emailaddress" class="form-control" id="emailaddress" placeholder="Enter email address" name="email"ngModel>
-            </div>
-          
-            <div class="col6">
-              <label for="Address" class="form-label">Address</label>
-              <input type="Address" class="form-control" id="address" placeholder="Enter Address"  name="address"ngModel>
-            </div>
-          
-  
-            <div class="col7">
-              <label for="Id number" class="form-label">ID Number</label>
-              <input type="Id number" class="form-control" id="id" placeholder="Id number"  name="idNo"ngModel>
-            </div>
-  
-            <div class="col8">
-              <label for="employeeId" class="form-label">Employee ID</label>
-              <input type="employeeId" class="form-control" id="employeeId" placeholder="Employee Id"  name="employeeId"ngModel>
-            </div>
-          
-            
-          
-          
-            <div class="col19">
-              <label for="employPositioneeId" class="form-label">Password</label>
-              <input type="employeeId" class="form-control" id="id" placeholder="password" name="password"ngModel>
-            </div>
-          
-        
-        <div class="col10">
-      <label for="department" class="form-label">Department</label>
-      <input type="department" class="form-control" id="id" placeholder="Department" name="department"ngModel >
-    </div>
-  
-    <div class="col15">
-      <label for="position" class="form-label">Position</label>
-      <input type="position" class="form-control" id="id" placeholder="Enter position" name="workRole"ngModel>
-    </div>
-  
-    <div class="col11">
-      <label for="emergncy name" class="form-label">Emergency contact name</label>
-      <input type="emergency name" class="form-control" id="id" placeholder="Emergency contact name" name="emergencyContactName"ngModel>
-    </div>
-  
-    <div class="col12">
-      <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-      <input type="emergencyrelationship" class="form-control" id="id" placeholder="Emergency contact relationship" name="emergencyContactRelationship"ngModel>
-    </div>
-  
-    <div class="col13">
-      <label for="emergencynumber" class="form-label">Emergency contact number</label>
-      <input type="emergencynumber" class="form-control" id="id" placeholder="Emergency contact number" name="emergencyContactNumber"ngModel>
-    </div>
-  
-          <div class="col14">
-              <button id="btn" routerLink="/dashboard">Submit</button>
-               </div>
-             </form>
-          </div>
 
 
   
 
    
+  <app-navbar class="reg-nav"></app-navbar>
+  <div class="container">
+  
+    <div class="heading">
+      <h1>Register employee</h1>
+    </div>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="columns">
+     
+   
+  
+        <div class="left">
+          <div>
+            <div class="name">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" formControlName="name" pattern="[a-zA-Z]+" required>
+            <div *ngIf="registrationForm.get('name').invalid && registrationForm.get('name').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          </div>
+        </div>
+          
+        
+        <div>
+          <div class="gender">
+              <label for="gender">Gender:</label>
+              <input type="text" id="gender" formControlName="gender" pattern="[a-zA-Z]+" required>
+              <div *ngIf="registrationForm.get('gender').invalid && registrationForm.get('gender').touched">
+                <small class="text-danger">Please enter a valid input</small>
+              </div>
+            </div>
+          </div>
+      
+      
+      
+      
+      
+          <div>
+            <div class="email">
+            <label for="email">Email:</label>
+            <input type="email" id="email" formControlName="email">
+            <div *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched">
+              <small class="text-danger">Please enter a valid email</small>
+            </div>
+          </div>
+        </div>
+      
+      
+      
+        <div>
+          <div class="idNo">
+          <label for="idNo">ID Number:</label>
+          <input type="text" id="idNo" formControlName="idNo">
+          <div *ngIf="registrationForm.get('idNo').invalid && registrationForm.get('idNo').touched">
+            <small class="text-danger">ID Number must be 13 digits</small>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div>
+        <div class="password">
+        <label for="password">Password:</label>
+        <input type="password" id="password" formControlName="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" required>
+        <div *ngIf="registrationForm.get('password').invalid && registrationForm.get('password').touched">
+          <small class="text-danger">Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long</small>
+        </div>
+      </div>
+      </div>
+      
+      
+      
+      <div>
+        <div class="position">
+        <label for="workRole">Work Role:</label>
+        <input type="text" id="workRole" formControlName="workRole" pattern="[a-zA-Z]+" required>
+        <div *ngIf="registrationForm.get('workRole').invalid && registrationForm.get('workRole').touched">
+          <small class="text-danger">Please enter a valid input</small>
+        </div>
+      </div>
+      </div>
+      
+      
+      
+      <div>
+        <div class="contactNo">
+          <label for="emergencyContactNo">Emergency Contact No:</label>
+          <input type="text" id="emergencyContactNo" formControlName="emergencyContactNo">
+          <div *ngIf="registrationForm.get('emergencyContactNo').invalid && registrationForm.get('emergencyContactNo').touched">
+            <small class="text-danger">Emergency Contact No must be 10 digits</small>
+          </div>
+        </div>
+      </div>
+      </div>
+      
+      <div class="right">
+        <div>
+            <div class="surname">
+            <label for="surname">Last Name:</label>
+            <input type="text" id="surname" formControlName="surname" pattern="[a-zA-Z]+">
+            <div *ngIf="registrationForm.get('surname').invalid && registrationForm.get('surname').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          </div>
+       
+          
+        
+        
+       
+      
+      
+          <div>
+            <div class="phone">
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" formControlName="phone">
+            <div *ngIf="registrationForm.get('phone').invalid && registrationForm.get('phone').touched">
+              <small class="text-danger">Phone must be 10 digits</small>
+            </div>
+          </div>
+        </div>
+      
+      
+         
+      
+      
+          <div>
+            <div class="address">
+            <label for="address">Address:</label>
+            <input type="text" id="address" formControlName="address" pattern="[A-Za-z0-9\s.,#-]+">
+            <div *ngIf="registrationForm.get('address').invalid && registrationForm.get('address').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
+          </div>
+        </div>
+      
+      
+          
+      
+      
+          <div>
+            <div class="empId">
+            <label for="employeeId">Employee ID:</label>
+            <input type="text" id="employeeId" formControlName="employeeId" pattern="[0-9]+">
+            <div *ngIf="registrationForm.get('employeeId').invalid && registrationForm.get('employeeId').touched" >
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          </div>
+        </div>
+      
+      
+      
+      
+          <div>
+            <div class="department">
+            <label for="department">Department:</label>
+            <input type="text" id="department" formControlName="department" pattern="[a-zA-Z]+"required >
+            <div *ngIf="registrationForm.get('department').invalid && registrationForm.get('department').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
+          
+          </div>
+        </div>
+      
+      
+          
+         
+        <div>
+      <div class="contactName">
+            <label for="emergencyContactName">Emergency Contact Name:</label>
+            <input type="text" id="emergencyContactName" formControlName="emergencyContactName" pattern="[a-zA-Z]+" required>
+         
+            <div *ngIf="registrationForm.get('emergencyContactName').invalid && registrationForm.get('emergencyContactName').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          </div>
+        </div>
+      
+      
+          <div>
+            <div class="relationship">
+            <label for="emergencyContactRelationship">Emergency Contact Relationship:</label>
+            <input type="text" id="emergencyContactRelationship" formControlName="emergencyContactRelationship" pattern="[a-zA-Z]+"required>
+            <div *ngIf="registrationForm.get('emergencyContactRelationship').invalid && registrationForm.get('emergencyContactRelationship').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+  
+      <div>
+        
+          <button type="submit" [disabled]="registrationForm.invalid">Submit</button>
+        
+        
+        </div>
+  
+      </div>  
+  
+  
+      
+  </div>
+    
+  
+  
+  
+  
+  </form>
+    
+  
+  </div>

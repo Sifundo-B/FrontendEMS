@@ -1,142 +1,171 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
 .container{
     width: 700px;
-    height: 750px;
+    height: 1000px;
     background-color:white;
-    //border:2px solid #f1ddff;
-    margin-left: 100px;
-    
-    //text-align: center;
-}
-form {
-    padding-left: 100px;
-}
-.cont {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    border: 1px solid #f1ddff;
-    overflow: hidden;
+    border:2px solid;
+    margin-top: 20px;
+    display: flex;
+  
 }
 
 button{
     background-color:white;
+ 
+  margin-right: 300px;
+ 
+    margin-top: 100px;
     border-radius: 10px;
-   margin-top: 80px;
+ 
     height:40px;
     width: 100px;
     background-color:purple ;
     color:white;
-    margin-left: 35%;
     
     
 }
 
-
 input{
     width: 250px;
-    height: 30px;}
+    border-radius: 30px;
+    height: 35px;
+    margin: 10px;
+    border: 0px;
+
+}
+.name{
+
+width:200px;
+background-color: whitesmoke;
 
 
-#name::placeholder{
-    color: rgb(221, 215, 215);
+}
+.surname{
+    background-color:whitesmoke;
+    width: 200px;
+   margin-left: 160px;
+  
+
+}
+.gender{
+    background-color: whitesmoke;
+    width:200px;
+}
+.phone{
+    background-color:whitesmoke;
+    width: 200px;
+    margin-left: 160px;
+}
+.email{
+  background-color: whitesmoke;  
+  width: 200px;
+}
+.address{
+    background-color: whitesmoke;
+    width: 200px;
+    margin-left: 160px;
+}
+
+.idNo{
+    background-color: whitesmoke;
+    width: 200px;
+}
+.empId{
+background-color: whitesmoke;
+width: 200px; margin-left: 160px;}
+.password{
+    background-color: whitesmoke;
+width: 200px
+}
+.department{
+    background-color:whitesmoke;
+width: 200px; margin-left: 160px;
+}
+.position{
+    background-color: whitesmoke;
+width: 200px
+}
+
+.contactName{
+    background-color: whitesmoke;
+width: 200px; margin-left: 160px;
+}
+
+.relationship{
+    background-color: whitesmoke;
+width: 200px; margin-left: 160px;
+}
+.contactNo{
+    background-color: whitesmoke;
+width: 200px;
 }
 
 
 .heading  {
-  background-color:white;
-  height: 120px;
+background-color:white;
+  height: 60px;
+
+  font-size: 40px;
+padding-bottom: 100px;
+margin-left: 70px;
+
+  
+}
+.heading{
+    width: 600px;
+    background-color: whitesmoke;
+
 }
 
 
 h1{
-    text-align: center;
+    margin-left: 90px;
     font-family:'Montserrat';
     padding-top: 30px;
-    
-}
-
-
-#gender::placeholder{
-    color: rgb(221, 215, 215);
-}
-
-
-#cellphone::placeholder{
-    color: rgb(221, 215, 215);
-}
-
-
-#email::placeholder{
-    color: rgb(221, 215, 215);
-}
-
-
-#address::placeholder{
-    color: rgb(221, 215, 215);
-}
-
-
-#maritalStatus::placeholder{
-    color: rgb(221, 215, 215);
-}
-#idnumber::placeholder{
-    color: rgb(221, 215, 215);
-}
-#id::placeholder{
-    color: rgb(221, 215, 215);
-}
-#password::placeholder{
-    color: rgb(221, 215, 215);
-}
-
-.col4{
-   margin-left: 350px; 
-   margin-top: -55px;
-}
-.col6{
-    margin-left: 350px; 
-    margin-top: -55px;
-}
-.col8{
-    margin-left: 350px; 
-    margin-top: -55px;
-}
-
-
-
-
-.col11{
-    margin-left: 350px;
-    margin-top: -165px;
-}
-.col2{
-    margin-left: 350px;
-    margin-top: -55px;
-}
-.col12{
-    margin-left: 350px;
-    margin-top: -110px;
-}
-    .col13{
-    margin-left: 350px;
-    margin-top: -55px;
-}
-#lastname::placeholder{
-color: rgb(221, 215, 215);}
+    width: 400px;
     
     
-#cellnumber::placeholder{
-color: rgb(221, 215, 215);}
+}
+.right{
+   
+   width:50%;
+height: 600px;
+background-color: whitesmoke;
+margin-right:80px ;
+  
+}
+.left{
+    
+    width: 50%;
+    height: 600px;
+    background-color: whitesmoke;
 
-#emailaddress::placeholder{
-color: rgb(221, 215, 215);}
+   
+}
 
-#employeeId::placeholder{
-color: rgb(221, 215, 215)};
+.container{
+    display: flexbox;
+    display: inline block;
+    background-color: whitesmoke;
+
+}
+.columns{
+    display: flex;
+  height: 800px;
+
+
+ 
+  margin-top: 150px;
+margin-left: -570px;
+width: 690px;
+
+ 
+}
+
+input.ng-invalid.ngtouched{border: red solid 2px;}
+
+
+
+
+
+
+  

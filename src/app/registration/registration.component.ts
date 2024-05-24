@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registration',
@@ -9,29 +8,37 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent {
-  constructor(private http: HttpClient) {}
+  registrationForm: FormGroup;
 
-  NewEmployee(employees: {
-    name: any;
-    surname: any;
-    gender: any;
-    phone: any;
-    email: any;
-    address: any;
-    idNo: any;
-    employeeId: any;
-    password: any;
-    department: any;
-    workRole: any;
-    emergencyContactName: any;
-    emergencyContactRelationship: any;
-    emergencyContactNo: any;
-  }) {
-    console.log(employees);
-    this.http.post('http://localhost:3000/employeeData',employees).subscribe((res) => {
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.registrationForm = this.fb.group({
+      name: ['', Validators.required],
+      surname: ['', Validators.required],
+      gender: [''],
+      phone: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      email: ['', [Validators.required, Validators.email]],
+      address: [''],
+      idNo: ['', [Validators.required, Validators.pattern(/^\d{13}$/)]],
+      employeeId: ['', Validators.required],
+      password: ['', Validators.required],
+      department: [''],
+      workRole: [''],
+      emergencyContactName: [''],
+      emergencyContactRelationship: [''],
+      emergencyContactNo: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+    });
+  }
+
+  onSubmit() {
+    if (this.registrationForm.valid) {
+      const employees = this.registrationForm.value;
+      console.log(employees);
+      this.http.post('http://localhost:3000/employeeData', employees).subscribe((res) => {
         console.log(res);
       });
+    } else {
+      // Handle form validation errors
+      console.log('Form is invalid. Please check all fields.');
+    }
   }
-
-
-  }
+}
