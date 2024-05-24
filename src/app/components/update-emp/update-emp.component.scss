@@ -18,16 +18,16 @@
     padding-right: 3rem;
 }
 
-.sucessfull-p{
-    background-color: #90ee90;
-    color: #009000;
-    width: fit-content;
-    justify-self: center;
-    align-self: center;
-    padding: 8px 20px 8px 20px;
-    border-radius: 10px;
-    display: none;
-}
+// .sucessfull-p{
+//     background-color: #90ee90;
+//     color: #009000;
+//     width: fit-content;
+//     justify-self: center;
+//     align-self: center;
+//     padding: 8px 20px 8px 20px;
+//     border-radius: 10px;
+//     display: none;
+// }
 
 .buttons-sub{
     display: flex;
@@ -38,4 +38,22 @@
     width: 250px;
     align-self: center;
     justify-self: center;
+}
+.btn-secondary{
+    color: rgb(0, 0, 0);
+    border: transparent;
+
+}
+
+.btn3{
+    background-color:rgb(99, 21, 147) ;
+}
+
+.btn2{
+    background-color: rgb(99, 21, 147);
+    border: 505%;
+}
+
+.btn1{
+    background-color: rgb(99, 21, 147);
 }

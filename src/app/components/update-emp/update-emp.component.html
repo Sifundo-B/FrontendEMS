@@ -47,8 +47,9 @@
             <input formControlName="id" type="text" class="form-control" id="id" [(ngModel)]="currentEmployee.idNo">
           </div>
           <div class="col-md-6">
-            <label for="employeeId" class="form-label">Employee ID</label>
-            <input formControlName="employeeId" type="text" class="form-control" id="employeeId " [(ngModel)]="currentEmployee.employeeId">
+            <label for="employeeProfileimg" class="form-label">Employee Profile Image</label>
+            <a class="btn2">Uplaod img</a>
+            <a class="btn1">Remove img</a>
           </div>
         </div>
         <div class="row mb-3">
@@ -57,7 +58,21 @@
             <input formControlName="password" type="password" class="form-control" id="password" [(ngModel)]="currentEmployee.password">
           </div>
           <div class="col-md-6">
-            <label for="department" class="form-label">Department</label>
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Drepartment
+              </button>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item">Development</a></li>
+                <li><a class="dropdown-item">Quality Assurance (QA)</a></li>
+                <li><a class="dropdown-item">Product Management</a></li>
+                <li><a class="dropdown-item">Sales and Marketing</a></li>
+                <li><a class="dropdown-item">Customer Support</a></li>
+                <li><a class="dropdown-item">Human Resources</a></li>
+                <li><a class="dropdown-item">Finance and Administration</a></li>
+              </ul>
+              
+            </div>
             <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department">
           </div>
         </div>
@@ -83,8 +98,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 buttons-sub">
-            <p class="sucessfull-p">User successfully updated!</p>
-            <button type="submit" class="btn btn-primary">Update</button>
+            <button type="submit" class="btn3">Update</button>
           </div>
         </div>
       </form>

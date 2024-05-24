@@ -13,13 +13,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './update-emp.component.html',
   styleUrls: ['./update-emp.component.scss']
 })
+
+
 export class UpdateEmpComponent {
   data: employeeData[] = []
   formData: any;
   currentEmployee: any;
   employeeId: any;
   employeeForm: FormGroup;
-
+  onFileSelected: any;
+  onRemove:any;
 
   constructor(private http: HttpClient, private employee: EmployeesService, private route: ActivatedRoute, private fb: FormBuilder) {}
 
