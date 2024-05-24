@@ -15,72 +15,166 @@
           <div class="col-md-6">
             <label for="inputName" class="form-label">First name</label>
             <input formControlName="name" class="form-control" id="name" [(ngModel)]="currentEmployee.name"  pattern="[a-zA-Z]+" required>
+            <div *ngIf="employeeForm.get('name').invalid && employeeForm.get('name').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
           </div>
+          
+          
           <div class="col-md-6">
             <label for="inputlastname" class="form-label">Last name</label>
-            <input formControlName="surname" class="form-control" id="lastname" [(ngModel)]="currentEmployee.surname">
+            <input formControlName="surname" class="form-control" id="lastname" [(ngModel)]="currentEmployee.surname"  pattern="[a-zA-Z]+" required>
+            <div *ngIf="employeeForm.get('surname').invalid && employeeForm.get('surname').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
           </div>
         </div>
+        
+        
+        
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="inputGender" class="form-label">Gender</label>
-            <input formControlName="gender" class="form-control" id="gender" [(ngModel)]="currentEmployee.gender">
+            <input formControlName="gender" class="form-control" id="gender" [(ngModel)]="currentEmployee.gender" pattern="[a-zA-Z]+" required>
+          
+            <div *ngIf="employeeForm.get('gender').invalid && employeeForm.get('gender').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
           </div>
+          
+          
+          
           <div class="col-md-6">
             <label for="inputcellnumber" class="form-label">Cellphone number</label>
-            <input formControlName="phone" type="tel" class="form-control" id="cellnumber" [(ngModel)]="currentEmployee.phone">
+            <input formControlName="phone" type="tel" class="form-control" id="cellnumber"     minlength="10" maxlength="10"  [(ngModel)]="currentEmployee.phone"  pattern="[0-9]+"  required>
+          
+            <div *ngIf="employeeForm.get('phone').invalid && employeeForm.get('phone').touched">
+              <small class="text-danger"> Contact No must be 10 digits</small>
+            </div>
+          
           </div>
         </div>
+       
+       
+       
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="inputemailaddress" class="form-label">Email address</label>
-            <input formControlName="email" type="email" class="form-control" id="emailaddress" [(ngModel)]="currentEmployee.email">
+            <input formControlName="email" type="email" class="form-control" id="emailaddress" [(ngModel)]="currentEmployee.email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+            <div *ngIf="employeeForm.get('email').invalid && employeeForm.get('email').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
           </div>
+          
+          
           <div class="col-md-6">
             <label for="Address" class="form-label">Address</label>
-            <input formControlName="address" type="text" class="form-control" id="address" [(ngModel)]="currentEmployee.address">
+            <input formControlName="address" type="text" class="form-control" id="address" [(ngModel)]="currentEmployee.address"  pattern="[A-Za-z0-9\s.,#-]+" required>
+            <div *ngIf="employeeForm.get('address').invalid && employeeForm.get('address').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
           </div>
         </div>
+        
+        
+        
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="Id number" class="form-label">ID Number</label>
-            <input formControlName="id" type="text" class="form-control" id="id" [(ngModel)]="currentEmployee.idNo">
+            <input formControlName="id" type="text"  minlength="13"  maxlength="13"      class="form-control" id="id"  [(ngModel)]="currentEmployee.idNo" pattern="[0-9]+" required>
+          
+            <div *ngIf="employeeForm.get('id').invalid && employeeForm.get('id').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
           </div>
+          
+          
           <div class="col-md-6">
             <label for="employeeId" class="form-label">Employee ID</label>
-            <input formControlName="employeeId" type="text" class="form-control" id="employeeId " [(ngModel)]="currentEmployee.employeeId">
+            <input formControlName="employeeId" type="text" class="form-control" id="employeeId " [(ngModel)]="currentEmployee.employeeId" pattern="[0-9]+" required>
+            <div *ngIf="employeeForm.get('employeeId').invalid && employeeForm.get('employeeId').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
           </div>
         </div>
+        
+        
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="password" class="form-label">Password</label>
-            <input formControlName="password" type="password" class="form-control" id="password" [(ngModel)]="currentEmployee.password">
+            <input formControlName="password" type="password" class="form-control" id="password" [(ngModel)]="currentEmployee.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,}" required>
+            <div *ngIf="employeeForm.get('password').invalid && employeeForm.get('password').touched">
+              <small class="text-danger">*Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long</small>
+            </div>
+          
           </div>
+          
+          
+          
           <div class="col-md-6">
             <label for="department" class="form-label">Department</label>
-            <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department">
+            <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department"  pattern="[a-zA-Z]+" required>
+            <div *ngIf="employeeForm.get('department').invalid && employeeForm.get('department').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
           </div>
         </div>
+        
+        
+        
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="position" class="form-label">Position</label>
-            <input formControlName="workRole" type="text" class="form-control" id="position" [(ngModel)]="currentEmployee.workRole">
+            <input formControlName="workRole" type="text" class="form-control" id="position" [(ngModel)]="currentEmployee.workRole" pattern="[a-zA-Z]+" required>
+            <div *ngIf="employeeForm.get('workRole').invalid && employeeForm.get('workRole').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
           </div>
+          
+          
+          
           <div class="col-md-6">
             <label for="emergencyName" class="form-label">Emergency contact name</label>
-            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName" [(ngModel)]="currentEmployee.emergencyContactName">
+            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName" [(ngModel)]="currentEmployee.emergencyContactName" pattern="[a-zA-Z]+" required>
+          
+            <div *ngIf="employeeForm.get('emergencyContactName').invalid && employeeForm.get('emergencyContactName').touched">
+              <small class="text-danger">Please enter a valid input</small>
+            </div>
+          
           </div>
         </div>
         <div class="row mb-3">
+          
+          
+          
           <div class="col-md-6">
             <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship" [(ngModel)]="currentEmployee.emergencyContactRelationship">
+            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship" [(ngModel)]="currentEmployee.emergencyContactRelationship" pattern="[a-zA-Z]+" required>
+            <div *ngIf="employeeForm.get('emergencyContactRelationship').invalid && employeeForm.get('emergencyContactRelationship').touched">
+              <small class="text-danger">Please enter a valid  input</small>
+            </div>
+          
+          
           </div>
+          
+          
+          
           <div class="col-md-6">
             <label for="emergencynumber" class="form-label">Emergency contact number</label>
-            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencynumber" [(ngModel)]="currentEmployee.emergencyContactNo">
+            <input formControlName="emergencyContactNo" type="tel" class="form-control"  minlength="10" maxlength="10"        id="emergencynumber" [(ngModel)]="currentEmployee.emergencyContactNo" pattern="[0-9]+"  required>
+          <div *ngIf="employeeForm.get('emergencyContactNo').invalid && employeeForm.get('emergencyContactNo').touched">
+              <small class="text-danger">Emergency Contact No must be 10 digits</small>
+            </div>
+          
           </div>
         </div>
+        
+        
+        
         <div class="row">
           <div class="col-md-12 buttons-sub">
             <p class="sucessfull-p">User successfully updated!</p>
