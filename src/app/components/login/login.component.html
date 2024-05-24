@@ -14,11 +14,18 @@
           <div class="form">
             <label for="email">Email address</label>
             <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+            <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+              <small class="text-danger">Please enter a valid email address</small>
+            </div>
+          
           </div>
           <br>
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" formControlName="password"  class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+            <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+              <small class="text-danger">*Password must contain at least one uppercase letter, one lowercase letter, one number, one special character, and be at least 8 characters long</small>
+            </div>
           </div>
           <br>
          <div class="btn">
