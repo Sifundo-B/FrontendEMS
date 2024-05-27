@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { EmployeesService } from 'src/app/services/employees.service';
 import { EMPUser, Department, Position } from 'src/app/models/EMPUser';
 
@@ -17,7 +18,8 @@ export class RegistrationComponent implements OnInit {
 
   constructor(
     private empservice: EmployeesService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router // Inject Router here
   ) {
     this.employeeForm = this.fb.group({
       firstName: ['', Validators.required],
@@ -64,6 +66,8 @@ export class RegistrationComponent implements OnInit {
 
     this.empservice.createEmployee(newEmployee).subscribe((data) => {
       console.log('Employee created:', data);
+      alert('Employee successfully Added!');
+      this.router.navigate(['/dashboard']); // Navigate to the dashboard after success
     }, (error) => {
       this.errorMessage = error;
     });
