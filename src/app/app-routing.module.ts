@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/logincomponent';
 import { RegistrationComponent } from './registration/registration.component';
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
+import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
 
 
 
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path:'emp-dashboard', component: EmployeeDashboardComponent},
   {path: 'update-emp', component: UpdateEmpComponent},
   {path: 'tax-cert', component: TaxCertComponent},
+  {path: 'recover',component:DeletedEmployeesComponent}
   
 ];
 

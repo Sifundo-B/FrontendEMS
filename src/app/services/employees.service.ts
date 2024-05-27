@@ -31,7 +31,17 @@ export class EmployeesService {
       'Authorization': `Bearer ${token}`
     });
   }
+  getDeletedEmployees(): Observable<EMPUser[]> {
+    return this.http.get<EMPUser[]>(`${this.baseUrl}/employees/deleted`, { headers: this.getHeaders() }).pipe(
+      catchError(this.handleError)
+    );
+  }
 
+  recoverEmployee(id: number): Observable<void> {
+    return this.http.put<void>(`${this.baseUrl}/employees/recover/${id}`, {}, { headers: this.getHeaders() }).pipe(
+      catchError(this.handleError)
+    );
+  }
   getEmployees(): Observable<EMPUser[]> {
     return this.http.get<EMPUser[]>(`${this.baseUrl}/employees`, { headers: this.getHeaders() }).pipe(
       catchError(this.handleError)

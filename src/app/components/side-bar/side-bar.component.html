@@ -12,6 +12,10 @@
             <i class="fa fa-users" aria-hidden="true"></i>
             <p>Employee Management</p>
         </a>
+        <a class="link" routerLink="/recover" *ngIf="currentUser.email == 'david@gmail.com'">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <p>Deleted Employees</p>
+        </a>
         <a class="link" routerLink="/tax-cert">
             <i class="fa-solid fa-file"></i>
             <p>Tax Certificates</p>

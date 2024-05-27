@@ -21,6 +21,7 @@ import { NavigationComponent} from './components/navigation/navigation.component
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 import { MockSideComponent } from './components/mock-side/mock-side.component';
+import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MockSideComponent } from './components/mock-side/mock-side.component';
     UpdateEmpComponent,
     TaxCertComponent,
     MockSideComponent,
+    DeletedEmployeesComponent,
     
   ],
   imports: [
