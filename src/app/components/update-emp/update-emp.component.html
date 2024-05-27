@@ -1,84 +1,88 @@
 <app-navbar class="reg-nav"></app-navbar>
 <div class="cont">
-  
-
-<div class="container-outer">
-  <app-side-bar></app-side-bar>
-  
+  <div class="container-outer">
+    <app-side-bar></app-side-bar>
     <div class="container mt-5">
       <div class="heading">
         <h1>Update Employee Details</h1>
       </div>
-
       <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="inputName" class="form-label">First name</label>
-            <input formControlName="name" class="form-control" id="name" [(ngModel)]="currentEmployee.name">
+            <label for="firstName" class="form-label">First name</label>
+            <input formControlName="firstName" class="form-control" id="firstName">
           </div>
           <div class="col-md-6">
-            <label for="inputlastname" class="form-label">Last name</label>
-            <input formControlName="surname" class="form-control" id="lastname" [(ngModel)]="currentEmployee.surname">
+            <label for="lastName" class="form-label">Last name</label>
+            <input formControlName="lastName" class="form-control" id="lastName">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="inputGender" class="form-label">Gender</label>
-            <input formControlName="gender" class="form-control" id="gender" [(ngModel)]="currentEmployee.gender">
+            <input formControlName="gender" class="form-control" id="gender">
           </div>
           <div class="col-md-6">
             <label for="inputcellnumber" class="form-label">Cellphone number</label>
-            <input formControlName="phone" type="tel" class="form-control" id="cellnumber" [(ngModel)]="currentEmployee.phone">
+            <input formControlName="phoneNumber" type="tel" class="form-control" id="cellnumber">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="inputemailaddress" class="form-label">Email address</label>
-            <input formControlName="email" type="email" class="form-control" id="emailaddress" [(ngModel)]="currentEmployee.email">
+            <input formControlName="email" type="email" class="form-control" id="emailaddress">
           </div>
           <div class="col-md-6">
             <label for="Address" class="form-label">Address</label>
-            <input formControlName="address" type="text" class="form-control" id="address" [(ngModel)]="currentEmployee.address">
+            <input formControlName="address" type="text" class="form-control" id="address">
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="Id number" class="form-label">ID Number</label>
-            <input formControlName="id" type="text" class="form-control" id="id" [(ngModel)]="currentEmployee.idNo">
+            <input formControlName="idNumber" type="text" class="form-control" id="idNumber">
           </div>
           <div class="col-md-6">
-            <label for="employeeId" class="form-label">Employee ID</label>
-            <input formControlName="employeeId" type="text" class="form-control" id="employeeId " [(ngModel)]="currentEmployee.employeeId">
+            <label for="dateOfBirth" class="form-label">Date of Birth</label>
+            <input formControlName="dateOfBirth" type="date" class="form-control" id="dateOfBirth">
           </div>
         </div>
         <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input formControlName="startDate" type="date" class="form-control" id="startDate">
+          </div>
           <div class="col-md-6">
             <label for="password" class="form-label">Password</label>
-            <input formControlName="password" type="password" class="form-control" id="password" [(ngModel)]="currentEmployee.password">
+            <input formControlName="password" type="password" class="form-control" id="password">
           </div>
+        </div>
+        <div class="row mb-3">
           <div class="col-md-6">
             <label for="department" class="form-label">Department</label>
-            <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department">
+            <select formControlName="departmentId" class="form-control" id="department">
+              <option *ngFor="let department of departments" [value]="department.departmentId">{{department.DepartmentName}}</option>
+            </select>
           </div>
-        </div>
-        <div class="row mb-3">
           <div class="col-md-6">
             <label for="position" class="form-label">Position</label>
-            <input formControlName="workRole" type="text" class="form-control" id="position" [(ngModel)]="currentEmployee.workRole">
-          </div>
-          <div class="col-md-6">
-            <label for="emergencyName" class="form-label">Emergency contact name</label>
-            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName" [(ngModel)]="currentEmployee.emergencyContactName">
+            <select formControlName="positionId" class="form-control" id="position">
+              <option *ngFor="let position of positions" [value]="position.positionId">{{position.positionName}}</option>
+            </select>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
+            <label for="emergencyName" class="form-label">Emergency contact name</label>
+            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName">
+          </div>
+          <div class="col-md-6">
             <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship" [(ngModel)]="currentEmployee.emergencyContactRelationship">
+            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship">
           </div>
           <div class="col-md-6">
             <label for="emergencynumber" class="form-label">Emergency contact number</label>
-            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencynumber" [(ngModel)]="currentEmployee.emergencyContactNo">
+            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencynumber">
           </div>
         </div>
         <div class="row">
@@ -89,7 +93,5 @@
         </div>
       </form>
     </div>
-    
-  
   </div>
 </div>

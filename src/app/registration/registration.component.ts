@@ -1,7 +1,7 @@
-import { Component , OnInit} from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmployeesService } from 'src/app/services/employees.service';
-import { EMPUser,Department,Position } from 'src/app/models/EMPUser';
+import { EMPUser, Department, Position } from 'src/app/models/EMPUser';
 
 @Component({
   selector: 'app-registration',
@@ -9,72 +9,63 @@ import { EMPUser,Department,Position } from 'src/app/models/EMPUser';
   styleUrls: ['./registration.component.scss'],
 })
 export class RegistrationComponent implements OnInit {
-  // constructor(private http: HttpClient) {}
-
-  // NewEmployee(employees: {
-  //   name: any;
-  //   surname: any;
-  //   gender: any;
-  //   phone: any;
-  //   email: any;
-  //   address: any;
-  //   idNo: any;
-  //   employeeId: any;
-  //   password: any;
-  //   department: any;
-  //   workRole: any;
-  //   emergencyContactName: any;
-  //   emergencyContactRelationship: any;
-  //   emergencyContactNo: any;
-  // }) {
-  //   console.log(employees);
-  //   this.http.post('http://localhost:3000/employeeData',employees).subscribe((res) => {
-  //       console.log(res);
-  //     });
-  // }
-  newEmployee: EMPUser = new EMPUser();
+ 
+  employeeForm: FormGroup;
   departments: Department[] = [];
   positions: Position[] = [];
   errorMessage: string = '';
 
-  constructor(private empservice: EmployeesService) { }
+  constructor(
+    private empservice: EmployeesService,
+    private fb: FormBuilder
+  ) {
+    this.employeeForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      gender: ['', Validators.required],
+      phoneNumber: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      address: ['', Validators.required],
+      idNumber: ['', Validators.required],
+      password: ['', Validators.required],
+      dateOfBirth: ['', Validators.required],
+      startDate: ['', Validators.required],
+      department: ['', Validators.required],
+      position: ['', Validators.required],
+      emergencyContactName: [''],
+      emergencyContactRelationship: [''],
+      emergencyContactNo: ['']
+    });
+  }
 
   ngOnInit(): void {
     this.empservice.getDepartments().subscribe((data) => {
       this.departments = data;
+      console.log("get departments: ", this.departments);
     }, (error) => {
       this.errorMessage = error;
     });
 
     this.empservice.getPositions().subscribe((data) => {
       this.positions = data;
+      console.log("get positions: ", this.positions);
     }, (error) => {
       this.errorMessage = error;
     });
   }
 
   addEmployee(): void {
-    this.empservice.createEmployee(this.newEmployee).subscribe((data) => {
+    const formValue = this.employeeForm.value;
+    const newEmployee: EMPUser = {
+      ...formValue,
+      department: this.departments.find(dep => dep.departmentId === formValue.department),
+      position: this.positions.find(pos => pos.positionId === formValue.position)
+    };
+
+    this.empservice.createEmployee(newEmployee).subscribe((data) => {
       console.log('Employee created:', data);
     }, (error) => {
       this.errorMessage = error;
     });
   }
-
-  updateEmployee(id: number): void {
-    this.empservice.updateEmployee(id, this.newEmployee).subscribe((data) => {
-      console.log('Employee updated:', data);
-    }, (error) => {
-      this.errorMessage = error;
-    });
-  }
-
-  deleteEmployee(id: number): void {
-    this.empservice.deleteEmployee(id).subscribe(() => {
-      console.log('Employee deleted');
-    }, (error) => {
-      this.errorMessage = error;
-    });
-  }
-
-  }
+}

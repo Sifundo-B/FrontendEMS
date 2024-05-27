@@ -1,16 +1,12 @@
-
-  <div class="col-12">
-   
-    <div class="row">
-     
-      <div class="photo col sm-8">
-        
-        <img class="sidePicture" src="assets/logpicture.webp" alt="">
-      </div>
-      <div class="form col sm-4">
-          <img class="logoPicture" src="assets/Frame 18.png" alt="">
-        <div class="form">
-          <form  [formGroup]="loginForm" (ngSubmit)="login()">
+<div class="col-12">
+  <div class="row">
+    <div class="photo col sm-8">
+      <img class="sidePicture" src="assets/logpicture.webp" alt="">
+    </div>
+    <div class="form col sm-4">
+      <img class="logoPicture" src="assets/Frame 18.png" alt="">
+      <div class="form">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form">
             <label for="email">Email address</label>
             <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
@@ -18,23 +14,17 @@
           <br>
           <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" formControlName="password"  class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+            <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
           </div>
           <br>
-         <div class="btn">
-          <button type="submit" class="btn" onclick="" >login</button>
-         </div></form>
-
-         <br>
-          <a routerLink="/" class="link"> <p>Back to home</p> </a>
+          <div class="btn">
+            <button type="submit" class="btn">Login</button>
           </div>
-      
-      <div>
-        
-
+        </form>
+        <br>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+        <a routerLink="/" class="link"><p>Back to home</p></a>
       </div>
-  
     </div>
-  
   </div>
-
+</div>

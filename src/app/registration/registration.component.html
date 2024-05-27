@@ -1,29 +1,90 @@
-<div>
-  <h2>Add Employee</h2>
-  <form (submit)="addEmployee()">
-    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
-    <!-- form fields for employee data -->
-    <div>
-      <label for="firstName">First Name:</label>
-      <input id="firstName" [(ngModel)]="newEmployee.firstName" name="firstName" required />
+<div class="container">
+  <div class="heading">
+    <h1>Register Employee</h1>
+  </div>
+  <form [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="firstName" class="form-label">First name</label>
+        <input formControlName="firstName" class="form-control" id="firstName">
+      </div>
+      <div class="col-md-6">
+        <label for="lastName" class="form-label">Last name</label>
+        <input formControlName="lastName" class="form-control" id="lastName">
+      </div>
     </div>
-    <div>
-      <label for="lastName">Last Name:</label>
-      <input id="lastName" [(ngModel)]="newEmployee.lastName" name="lastName" required />
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="gender" class="form-label">Gender</label>
+        <input formControlName="gender" class="form-control" id="gender">
+      </div>
+      <div class="col-md-6">
+        <label for="phoneNumber" class="form-label">Cellphone number</label>
+        <input formControlName="phoneNumber" class="form-control" id="phoneNumber">
+      </div>
     </div>
-    <!-- Add other form fields similarly -->
-    <div>
-      <label for="department">Department:</label>
-      <select id="department" [(ngModel)]="newEmployee.department" name="department" required>
-        <option *ngFor="let dept of departments" [ngValue]="dept">{{ dept.DepartmentName }}</option>
-      </select>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email address</label>
+        <input formControlName="email" type="email" class="form-control" id="email">
+      </div>
+      <div class="col-md-6">
+        <label for="address" class="form-label">Address</label>
+        <input formControlName="address" type="text" class="form-control" id="address">
+      </div>
     </div>
-    <div>
-      <label for="position">Position:</label>
-      <select id="position" [(ngModel)]="newEmployee.position" name="position" required>
-        <option *ngFor="let pos of positions" [ngValue]="pos">{{ pos.positionName }}</option>
-      </select>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="idNumber" class="form-label">ID Number</label>
+        <input formControlName="idNumber" class="form-control" id="idNumber">
+      </div>
     </div>
-    <button type="submit">Add Employee</button>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input formControlName="password" type="password" class="form-control" id="password">
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label for="dateOfBirth" class="form-label">Date of Birth</label>
+          <input formControlName="dateOfBirth" type="date" class="form-control" id="dateOfBirth" required="true">
+        </div>
+        <div class="col-md-6">
+          <label for="startDate" class="form-label">Start Date</label>
+          <input formControlName="startDate" type="date" class="form-control" id="startDate" required="true">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="department" class="form-label">Department</label>
+        <select formControlName="department" class="form-control" id="department">
+          <option *ngFor="let department of departments" [value]="department.departmentId">{{department.DepartmentName}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="position" class="form-label">Position</label>
+        <select formControlName="position" class="form-control" id="position">
+          <option *ngFor="let position of positions" [value]="position.positionId">{{position.positionName}}</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="emergencyContactName" class="form-label">Emergency contact name</label>
+        <input formControlName="emergencyContactName" class="form-control" id="emergencyContactName">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="emergencyContactRelationship" class="form-label">Emergency contact relationship</label>
+        <input formControlName="emergencyContactRelationship" class="form-control" id="emergencyContactRelationship">
+      </div>
+      <div class="col-md-6">
+        <label for="emergencyContactNo" class="form-label">Emergency contact number</label>
+        <input formControlName="emergencyContactNo" class="form-control" id="emergencyContactNo">
+      </div>
+    </div>
+    <div class="col-md-12 buttons-sub">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
   </form>
 </div>
