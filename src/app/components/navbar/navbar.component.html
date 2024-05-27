@@ -1,4 +1,4 @@
-<div class="navigation-bar" *ngFor="let employee of data">
+<div class="navigation-bar" *ngFor="let employee of data" [ngClass]="{'nav-logged-out': isLoggedIn, 'nav-logged-in': !isLoggedIn}">
     <div class="left-nav">
         <svg width="301" height="76" viewBox="0 0 301 76" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_40_5" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="19" y="0" width="75" height="76">

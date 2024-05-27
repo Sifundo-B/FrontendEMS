@@ -13,6 +13,16 @@ export class NavbarComponent {
 
   constructor (private http : HttpClient, private userService: EmployeesService) {}
 
+  isLoggedIn: boolean = false;
+
+  // Simulate login/logout functionality
+  login() {
+    this.isLoggedIn = true;
+  }
+
+  logout() {
+    this.isLoggedIn = false;
+  }
   
     //navTitle: string = 'Employee Management';
     //userName: string = 'admin: David Brown';
