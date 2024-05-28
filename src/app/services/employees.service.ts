@@ -66,6 +66,27 @@ export class EmployeesService {
     );
   }
 
+  login(email: string, password: string): Observable<EMPUser> {
+    return this.http.post<EMPUser>(`${this.baseUrl}/auth/login`, { email, password }).pipe(
+      catchError(this.handleError)
+    );
+  }
+  
+  getEmployeeById(id: number): Observable<EMPUser> {
+    return this.http.get<EMPUser>(`${this.baseUrl}/employees/profile/${id}`, { headers: this.getHeaders() }).pipe(
+      catchError(this.handleError)
+    );
+  }
+  
+  updateEmployee(id: number, employee: EMPUser): Observable<EMPUser> {
+    return this.http.put<EMPUser>(`${this.baseUrl}/employees/profile/${id}`, employee, { headers: this.getHeaders() }).pipe(
+      catchError(this.handleError)
+    );
+  }
+  
+
+
+
   deleteEmployee(id: number): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/employees/${id}`, { headers: this.getHeaders() }).pipe(
       catchError(this.handleError)

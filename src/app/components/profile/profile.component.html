@@ -1,0 +1,56 @@
+<div>
+    <h2>Profile</h2>
+    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input formControlName="firstName">
+      </div>
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input formControlName="lastName">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input formControlName="email" type="email">
+      </div>
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input formControlName="phoneNumber">
+      </div>
+      <div>
+        <label for="address">Address:</label>
+        <input formControlName="address">
+      </div>
+      <div>
+        <label for="gender">Gender:</label>
+        <input formControlName="gender">
+      </div>
+      <div>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input formControlName="dateOfBirth" type="date">
+      </div>
+      <div>
+        <label for="startDate">Start Date:</label>
+        <input formControlName="startDate" type="date">
+      </div>
+      <div>
+        <label for="image">Profile Picture:</label>
+        <input type="file" (change)="onFileChange($event)">
+        <img [src]="profileForm.get('image')?.value" *ngIf="profileForm.get('image')?.value">
+      </div>
+      <div>
+        <label for="department">Department:</label>
+        <select formControlName="department">
+          <option *ngFor="let department of departments" [value]="department.departmentId">{{department.departmentName}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="position">Position:</label>
+        <select formControlName="position">
+          <option *ngFor="let position of positions" [value]="position.positionId">{{position.positionName}}</option>
+        </select>
+      </div>
+      <button type="submit">Update Profile</button>
+    </form>
+  </div>
+  
