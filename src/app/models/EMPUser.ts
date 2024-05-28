@@ -24,6 +24,7 @@ export class EMPUser {
     departmentId!: number;
     DepartmentName!: string;
     deleted: boolean = false;
+    id: any;
   }
   
   export class Position {

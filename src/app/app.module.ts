@@ -22,6 +22,8 @@ import { UpdateEmpComponent } from './components/update-emp/update-emp.component
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 import { MockSideComponent } from './components/mock-side/mock-side.component';
 import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
+import { DepartmentComponent } from './components/department/department.component';
+import { PositionComponent } from './components/position/position.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees
     TaxCertComponent,
     MockSideComponent,
     DeletedEmployeesComponent,
+    DepartmentComponent,
+    PositionComponent,
     
   ],
   imports: [

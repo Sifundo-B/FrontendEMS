@@ -1,0 +1,29 @@
+<div class="container-employees">
+    <div class="top">
+      <div class="titles">
+        <h1>Departments</h1>
+        <p>Department Details</p>
+      </div>
+      <button routerLink="/registration"><i class="fa-solid fa-plus"></i>Add new departmnet</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Department Name</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let department of departments">
+          <td scope="row">{{department.DepartmentName}} </td>
+         
+          
+          <td>
+            <a routerLink="/update-emp" [queryParams]="{ id: department.id }" class="update-btn">Update</a>
+            <a class="delete-btn" (click)="deleteDepartment(department)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
