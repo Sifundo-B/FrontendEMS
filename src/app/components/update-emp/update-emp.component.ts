@@ -16,6 +16,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 export class UpdateEmpComponent {
+selected: string = '';
+selectChangeHandler($event: any) {
+  this.selected = $event.target.value;
+}
   data: employeeData[] = []
   formData: any;
   currentEmployee: any;

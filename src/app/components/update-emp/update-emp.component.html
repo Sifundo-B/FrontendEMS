@@ -46,11 +46,6 @@
             <label for="Id number" class="form-label">ID Number</label>
             <input formControlName="id" type="text" class="form-control" id="id" [(ngModel)]="currentEmployee.idNo">
           </div>
-          <div class="col-md-6">
-            <label for="employeeProfileimg" class="form-label">Employee Profile Image</label>
-            <a class="btn2">Uplaod img</a>
-            <a class="btn1">Remove img</a>
-          </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
@@ -59,21 +54,19 @@
           </div>
           <div class="col-md-6">
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Drepartment
-              </button>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item">Development</a></li>
-                <li><a class="dropdown-item">Quality Assurance (QA)</a></li>
-                <li><a class="dropdown-item">Product Management</a></li>
-                <li><a class="dropdown-item">Sales and Marketing</a></li>
-                <li><a class="dropdown-item">Customer Support</a></li>
-                <li><a class="dropdown-item">Human Resources</a></li>
-                <li><a class="dropdown-item">Finance and Administration</a></li>
-              </ul>
-              
+              <p>Department</p>
+              <select (change)="selectChangeHandler($event)">
+                <option value=""></option>
+                <option value="Development">Development</option>
+                <option value="Quality Assurance">Quality Assurance</option>
+                <option value="Product Management">Product Management</option>
+                <option value="Sales and Marketing">Sales and Marketing</option>
+                <option value="Customer Support">Customer Support</option>
+                <option value="Human Resources">Human Resources</option>
+                <option value="Finance and Administration">Finance and Administration</option>
+              </select>
+              <b>{{selected}}</b>
             </div>
-            <input formControlName="department" type="text" class="form-control" id="department" [(ngModel)]="currentEmployee.department">
           </div>
         </div>
         <div class="row mb-3">
