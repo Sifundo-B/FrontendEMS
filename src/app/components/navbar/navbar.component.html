@@ -1,4 +1,5 @@
-<div class="navigation-bar" *ngFor="let employee of data">
+<nav [ngClass]="{ 'logged-in': isLoggedIn }">
+<div class="navigation-bar" >
     <div class="left-nav">
         <a href="/dashboard">
         <svg width="301" height="76" viewBox="0 0 301 76" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -34,4 +35,7 @@
         <p>{{emp.firstName} {{emp.lastName}</p>
         <img src="{{emp.imgUrl}}" alt="userPicture">
     </div> -->
+    <div *ngIf="isLoggedIn">Welcome, User!</div>
+    <div *ngIf="!isLoggedIn">Please log in.</div>
 </div>
+</nav>

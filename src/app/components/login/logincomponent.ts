@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EmployeesService } from 'src/app/services/employees.service';
 import { LoginService } from 'src/app/service/login.service';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private userService: EmployeesService,
-    private loginService: LoginService // Inject the LoginService
+    private loginService: LoginService,
+    private authService: AuthService // Inject AuthService
   ) {}
 
   ngOnInit(): void {
@@ -42,6 +44,7 @@ export class LoginComponent implements OnInit {
     this.loginService.login(credentials).subscribe(
       response => {
         this.userService.setCurrentUser(response.user, response.token); // Store the user and token
+        this.authService.setLoggedIn(true); // Update the login state
         this.loginForm.reset();
         this.router.navigate(['/dashboard']);
       },

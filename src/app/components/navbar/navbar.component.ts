@@ -1,22 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { EmployeesService } from 'src/app/services/employees.service';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
-  data: any[] = [this.userService.getCurrentUser()];
+  isLoggedIn = false;
 
-  constructor (private http : HttpClient, private userService: EmployeesService) {}
+  constructor(private authService: AuthService) {}
 
-  
-    //navTitle: string = 'Employee Management';
-    //userName: string = 'admin: David Brown';
-    //userImg: string = 'https://akm-img-a-in.tosshub.com/indiatoday/images/story/media_bank/202309/elon-musk-252648408-16x9.jpg?VersionId=9KYZpqpoY3WvH8eVZg54mmkpTGfvPCWj&size=690:388';    
-
-    
+  ngOnInit(): void {
+    this.authService.isLoggedIn$.subscribe(isLoggedIn => {
+      this.isLoggedIn = isLoggedIn;
+    });
+  }
 }
