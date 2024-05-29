@@ -60,11 +60,11 @@ export class EmployeesService {
     );
   }
 
-  updateEmployee(id: number, employee: EMPUser): Observable<EMPUser> {
-    return this.http.put<EMPUser>(`${this.baseUrl}/employees/${id}`, employee, { headers: this.getHeaders() }).pipe(
-      catchError(this.handleError)
-    );
-  }
+  // updateEmployee(id: number, employee: EMPUser): Observable<EMPUser> {
+  //   return this.http.put<EMPUser>(`${this.baseUrl}/employees/${id}`, employee, { headers: this.getHeaders() }).pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
 
   login(email: string, password: string): Observable<EMPUser> {
     return this.http.post<EMPUser>(`${this.baseUrl}/auth/login`, { email, password }).pipe(
