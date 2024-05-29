@@ -1,5 +1,6 @@
 <div class="navigation-bar" *ngFor="let employee of data">
     <div class="left-nav">
+        <a href="/dashboard">
         <svg width="301" height="76" viewBox="0 0 301 76" fill="none" xmlns="http://www.w3.org/2000/svg">
             <mask id="mask0_40_5" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="19" y="0" width="75" height="76">
             <path d="M94 0H19V76H94V0Z" fill="white"/>
@@ -22,14 +23,15 @@
             </defs>
             </svg>
 
-            <div>
+            <!-- <div>
                 <h3 class="nav-title"></h3>
                 <p>manage employees and details</p>
-            </div>
+            </div> -->
+        </a>
     </div>
         
-    <div class="user-info" *ngFor="let emp of data">
-        <p>{{emp.name}} {{emp.surname}}</p>
+    <!-- <div class="user-info" *ngFor="let emp of data">
+        <p>{{emp.firstName} {{emp.lastName}</p>
         <img src="{{emp.imgUrl}}" alt="userPicture">
-    </div>
+    </div> -->
 </div>

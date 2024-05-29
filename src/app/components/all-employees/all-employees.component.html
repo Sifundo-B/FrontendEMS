@@ -10,7 +10,7 @@
     <thead>
       <tr>
         <th>Employee Name</th>
-        <th>Title</th>
+        <th>Position</th>
         <th>Department</th>
         <th>Phone</th>
         <th>Address</th>
@@ -25,7 +25,7 @@
         <td>{{employee.phoneNumber}}</td>
         <td>{{employee.address}}</td>
         <td>
-          <a routerLink="/update-emp" [queryParams]="{ id: employee.id }" class="update-btn">Update</a>
+          <a [routerLink]="['/update-emp']" [queryParams]="{ id: employee.id }" class="update-btn">Update</a>
           <a class="delete-btn" (click)="deleteEmployee(employee)">Delete</a>
         </td>
       </tr>

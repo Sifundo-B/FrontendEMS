@@ -11,50 +11,86 @@
           <div class="col-md-6">
             <label for="firstName" class="form-label">First name</label>
             <input formControlName="firstName" class="form-control" id="firstName">
+            <div *ngIf="employeeForm.get('firstName').invalid && (employeeForm.get('firstName').dirty || employeeForm.get('firstName').touched)">
+              <div *ngIf="employeeForm.get('firstName').errors?.['required']">First name is required.</div>
+            </div>
           </div>
           <div class="col-md-6">
             <label for="lastName" class="form-label">Last name</label>
             <input formControlName="lastName" class="form-control" id="lastName">
+            <div *ngIf="employeeForm.get('lastName').invalid && (employeeForm.get('lastName').dirty || employeeForm.get('lastName').touched)">
+              <div *ngIf="employeeForm.get('lastName').errors?.['required']">Last name is required.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="inputGender" class="form-label">Gender</label>
+            <label for="gender" class="form-label">Gender</label>
             <input formControlName="gender" class="form-control" id="gender">
+            <div *ngIf="employeeForm.get('gender').invalid && (employeeForm.get('gender').dirty || employeeForm.get('gender').touched)">
+              <div *ngIf="employeeForm.get('gender').errors?.['required']">Gender is required.</div>
+            </div>
           </div>
           <div class="col-md-6">
-            <label for="inputcellnumber" class="form-label">Cellphone number</label>
-            <input formControlName="phoneNumber" type="tel" class="form-control" id="cellnumber">
+            <label for="phoneNumber" class="form-label">Cellphone number</label>
+            <input formControlName="phoneNumber" type="tel" class="form-control" id="phoneNumber">
+            <div *ngIf="employeeForm.get('phoneNumber').invalid && (employeeForm.get('phoneNumber').dirty || employeeForm.get('phoneNumber').touched)">
+              <div *ngIf="employeeForm.get('phoneNumber').errors?.['required']">Phone number is required.</div>
+              <div *ngIf="employeeForm.get('phoneNumber').errors?.['pattern']">Phone number must be 10 digits.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="inputemailaddress" class="form-label">Email address</label>
-            <input formControlName="email" type="email" class="form-control" id="emailaddress">
+            <label for="email" class="form-label">Email address</label>
+            <input formControlName="email" type="email" class="form-control" id="email">
+            <div *ngIf="employeeForm.get('email').invalid && (employeeForm.get('email').dirty || employeeForm.get('email').touched)">
+              <div *ngIf="employeeForm.get('email').errors?.['required']">Email is required.</div>
+              <div *ngIf="employeeForm.get('email').errors?.['email']">Invalid email format.</div>
+            </div>
           </div>
           <div class="col-md-6">
-            <label for="Address" class="form-label">Address</label>
+            <label for="address" class="form-label">Address</label>
             <input formControlName="address" type="text" class="form-control" id="address">
+            <div *ngIf="employeeForm.get('address').invalid && (employeeForm.get('address').dirty || employeeForm.get('address').touched)">
+              <div *ngIf="employeeForm.get('address').errors?.['required']">Address is required.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="Id number" class="form-label">ID Number</label>
+            <label for="idNumber" class="form-label">ID Number</label>
             <input formControlName="idNumber" type="text" class="form-control" id="idNumber">
+            <div *ngIf="employeeForm.get('idNumber').invalid && (employeeForm.get('idNumber').dirty || employeeForm.get('idNumber').touched)">
+              <div *ngIf="employeeForm.get('idNumber').errors?.['required']">ID Number is required.</div>
+              <div *ngIf="employeeForm.get('idNumber').errors?.['pattern']">ID Number must be 13 digits.</div>
+            </div>
           </div>
           <div class="col-md-6">
             <label for="dateOfBirth" class="form-label">Date of Birth</label>
             <input formControlName="dateOfBirth" type="date" class="form-control" id="dateOfBirth">
+            <div *ngIf="employeeForm.get('dateOfBirth').invalid && (employeeForm.get('dateOfBirth').dirty || employeeForm.get('dateOfBirth').touched)">
+              <div *ngIf="employeeForm.get('dateOfBirth').errors?.['required']">Date of Birth is required.</div>
+              <div *ngIf="employeeForm.get('dateOfBirth').errors?.['ageInvalid']">Must be at least 18 years old.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
             <label for="startDate" class="form-label">Start Date</label>
             <input formControlName="startDate" type="date" class="form-control" id="startDate">
+            <div *ngIf="employeeForm.get('startDate').invalid && (employeeForm.get('startDate').dirty || employeeForm.get('startDate').touched)">
+              <div *ngIf="employeeForm.get('startDate').errors?.['required']">Start Date is required.</div>
+            </div>
           </div>
           <div class="col-md-6">
             <label for="password" class="form-label">Password</label>
             <input formControlName="password" type="password" class="form-control" id="password">
+            <div *ngIf="employeeForm.get('password').invalid && (employeeForm.get('password').dirty || employeeForm.get('password').touched)">
+              <div *ngIf="employeeForm.get('password').errors?.['required']">Password is required.</div>
+              <div *ngIf="employeeForm.get('password').errors?.['minlength']">Password must be at least 8 characters long.</div>
+              <div *ngIf="employeeForm.get('password').errors?.['passwordInvalid']">Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
@@ -63,31 +99,38 @@
             <select formControlName="departmentId" class="form-control" id="department">
               <option *ngFor="let department of departments" [value]="department.departmentId">{{department.DepartmentName}}</option>
             </select>
+            <div *ngIf="employeeForm.get('departmentId').invalid && (employeeForm.get('departmentId').dirty || employeeForm.get('departmentId').touched)">
+              <div *ngIf="employeeForm.get('departmentId').errors?.['required']">Department is required.</div>
+            </div>
           </div>
           <div class="col-md-6">
             <label for="position" class="form-label">Position</label>
             <select formControlName="positionId" class="form-control" id="position">
               <option *ngFor="let position of positions" [value]="position.positionId">{{position.positionName}}</option>
             </select>
+            <div *ngIf="employeeForm.get('positionId').invalid && (employeeForm.get('positionId').dirty || employeeForm.get('positionId').touched)">
+              <div *ngIf="employeeForm.get('positionId').errors?.['required']">Position is required.</div>
+            </div>
           </div>
         </div>
         <div class="row mb-3">
           <div class="col-md-6">
-            <label for="emergencyName" class="form-label">Emergency contact name</label>
-            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyName">
+            <label for="emergencyContactName" class="form-label">Emergency contact name</label>
+            <input formControlName="emergencyContactName" type="text" class="form-control" id="emergencyContactName">
           </div>
           <div class="col-md-6">
-            <label for="emergencyrelationship" class="form-label">Emergency contact relationship</label>
-            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyrelationship">
+            <label for="emergencyContactRelationship" class="form-label">Emergency contact relationship</label>
+            <input formControlName="emergencyContactRelationship" type="text" class="form-control" id="emergencyContactRelationship">
           </div>
           <div class="col-md-6">
-            <label for="emergencynumber" class="form-label">Emergency contact number</label>
-            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencynumber">
+            <label for="emergencyContactNo" class="form-label">Emergency contact number</label>
+            <input formControlName="emergencyContactNo" type="tel" class="form-control" id="emergencyContactNo">
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 buttons-sub">
-            <p class="sucessfull-p">User successfully updated!</p>
+            <!-- Success Message -->
+            <p *ngIf="updateSuccess" class="successful-p">User successfully updated!</p>
             <button type="submit" class="btn btn-primary">Update</button>
           </div>
         </div>
