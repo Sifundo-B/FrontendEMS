@@ -1,4 +1,4 @@
-<div class="container-deleted-employees">
+<div class="container-employees">
     <div class="top">
       <div class="titles">
         <h1>Deleted Employees</h1>
@@ -9,7 +9,7 @@
       <thead>
         <tr>
           <th>Employee Name</th>
-          <th>Title</th>
+          <th>Position</th>
           <th>Department</th>
           <th>Phone</th>
           <th>Address</th>
@@ -18,13 +18,13 @@
       </thead>
       <tbody>
         <tr *ngFor="let employee of deletedEmployees">
-          <td scope="row">{{employee.firstName}} {{employee.lastName}}</td>
+          <td>{{employee.firstName}} {{employee.lastName}}</td>
           <td>{{employee.position?.positionName}}</td>
           <td>{{employee.department?.DepartmentName}}</td>
           <td>{{employee.phoneNumber}}</td>
           <td>{{employee.address}}</td>
           <td>
-            <a class="recover-btn" (click)="recoverEmployee(employee)">Recover</a>
+            <button (click)="recoverEmployee(employee)" class="recover-btn">Recover</button>
           </td>
         </tr>
       </tbody>

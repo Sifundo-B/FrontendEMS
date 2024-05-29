@@ -32,8 +32,8 @@ export class RegistrationComponent implements OnInit {
       password: ['', Validators.required],
       dateOfBirth: ['', Validators.required],
       startDate: ['', Validators.required],
-      department: ['', Validators.required],
-      position: ['', Validators.required],
+      departmentId: ['', Validators.required],
+      positionId: ['', Validators.required],
       emergencyContactName: [''],
       emergencyContactRelationship: [''],
       emergencyContactNo: ['']
@@ -60,14 +60,14 @@ export class RegistrationComponent implements OnInit {
     const formValue = this.employeeForm.value;
     const newEmployee: EMPUser = {
       ...formValue,
-      department: this.departments.find(dep => dep.departmentId === formValue.department),
-      position: this.positions.find(pos => pos.positionId === formValue.position)
+      department: this.departments.find(dep => dep.departmentId === formValue.departmentId),
+      position: this.positions.find(pos => pos.positionId === formValue.positionId)
     };
 
     this.empservice.createEmployee(newEmployee).subscribe((data) => {
       console.log('Employee created:', data);
       alert('Employee successfully Added!');
-      this.router.navigate(['/dashboard']); // Navigate to the dashboard after success
+      this.router.navigate(['/dashboard']);
     }, (error) => {
       this.errorMessage = error;
     });

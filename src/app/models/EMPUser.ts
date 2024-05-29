@@ -20,17 +20,17 @@ export class EMPUser {
     department!: Department;
   }
   
-  export class Department {
-    departmentId!: number;
-    DepartmentName!: string;
-    deleted: boolean = false;
+  export interface Department {
+    departmentId: number;
+    DepartmentName: string;
+    deleted: boolean;
   }
   
-  export class Position {
-    positionId!: number;
-    positionName!: string;
-    salary!: number;
-    deleted: boolean = false;
+  export interface Position {
+    positionId: number;
+    positionName: string;
+    salary: number;
+    deleted: boolean;
   }
   
   export enum Role {

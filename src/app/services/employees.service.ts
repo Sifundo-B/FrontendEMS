@@ -48,11 +48,11 @@ export class EmployeesService {
     );
   }
 
-  getEmployeeById(id: number): Observable<EMPUser> {
-    return this.http.get<EMPUser>(`${this.baseUrl}/employees/${id}`, { headers: this.getHeaders() }).pipe(
-      catchError(this.handleError)
-    );
-  }
+  // getEmployeeById(id: number): Observable<EMPUser> {
+  //   return this.http.get<EMPUser>(`${this.baseUrl}/employees/${id}`, { headers: this.getHeaders() }).pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
 
   createEmployee(employee: EMPUser): Observable<EMPUser> {
     return this.http.post<EMPUser>(`${this.baseUrl}/employees`, employee, { headers: this.getHeaders() }).pipe(
@@ -78,11 +78,11 @@ export class EmployeesService {
     );
   }
   
-  updateEmployee(id: number, employee: EMPUser): Observable<EMPUser> {
-    return this.http.put<EMPUser>(`${this.baseUrl}/employees/profile/${id}`, employee, { headers: this.getHeaders() }).pipe(
-      catchError(this.handleError)
-    );
-  }
+  // updateEmployee(id: number, employee: EMPUser): Observable<EMPUser> {
+  //   return this.http.put<EMPUser>(`${this.baseUrl}/employees/profile/${id}`, employee, { headers: this.getHeaders() }).pipe(
+  //     catchError(this.handleError)
+  //   );
+  // }
   
 
 
