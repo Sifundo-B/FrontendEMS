@@ -1,4 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 import { DepartmetService } from 'src/app/department.service';
 import { Department } from 'src/app/models/EMPUser';
 
@@ -7,24 +10,49 @@ import { Department } from 'src/app/models/EMPUser';
   templateUrl: './department.component.html',
   styleUrls: ['./department.component.scss']
 })
-export class DepartmentComponent {
+export class DepartmentComponent implements OnInit {
   @Input() department: Department[] = [];
   departments: Department[] = [];
+  departmentForm: FormGroup;
+  errorMessage: string = '';
 
-  constructor(private departService: DepartmetService) {}
-
+  constructor(private departService: DepartmetService,
+    private fb: FormBuilder,
+    private router: Router //w Inject Router here
+  ) {
+    this.departmentForm = this.fb.group({
+      departmentName: ['', Validators.required]
+      
+    });
+  }
   ngOnInit(): void {
     this.departService.getDepartments().subscribe(
       departs => this.departments = departs,
       error => console.error('Error fetching departments', error)
-    );
+    );  
   }
+  
 
-  deleteDepartment(department: Department): void {
-    this.departService.deleteDepartment(department.id).subscribe(
-      () => this.departments = this.departments.filter(depart => depart.id !== department.id),
-      error => console.error('Error deleting department', error)
-    );
-  }
+  addDepartment(): void {
+    const formValue = this.departmentForm.value;
+  //   const newDepartment: Department = {
+  //     ...formValue,
+  //     department: this.departments.find(dep => dep.departmentId === formValue.department)
+  //   };
 
+  //   this.departService.createDepartment(newDepartment).subscribe((data) => {
+  //     console.log('Employee created:', data);
+  //     alert('Department successfully Added!');
+  //     this.router.navigate(['/dashboard']); // Navigate to the dashboard after success
+  //   }, (error) => {
+  //     this.errorMessage = error;
+  //   });
+  // }
+  this.departService.createDepartment(formValue).subscribe(data=>{
+    console.log('Department created:', data);
+    alert('Department successfully added');
+    this.departmentForm.reset();
+    this.router.navigate(['/dashboard']);
+  })
+}
 }
