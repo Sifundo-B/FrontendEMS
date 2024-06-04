@@ -24,6 +24,7 @@ import { MockSideComponent } from './components/mock-side/mock-side.component';
 import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { PositionComponent } from './components/position/position.component';
+import { DepartmentListComponent } from './components/department-list/department-list.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { PositionComponent } from './components/position/position.component';
     DeletedEmployeesComponent,
     DepartmentComponent,
     PositionComponent,
+    DepartmentListComponent,
     
   ],
   imports: [

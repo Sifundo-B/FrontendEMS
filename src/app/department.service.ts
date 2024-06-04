@@ -10,10 +10,21 @@ import { EMPUser, Department, Position } from './models/EMPUser';
 export class DepartmetService {
   private baseUrl = 'http://localhost:8080/api';
   private currentDepart: any;
+  private currentUser: any;
+
 
   constructor(private http: HttpClient) { }
 
-  
+   setCurrentUser(user: any, token: string) {
+    localStorage.clear();
+    localStorage.setItem('currentUser', JSON.stringify(user));
+    localStorage.setItem('token', token);
+  }
+
+  getCurrentUser() {
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    return this.currentUser;
+  }
   getCurrentDepartment() {
     this.currentDepart = JSON.parse(localStorage.getItem('currentDepartment'));
     return this.currentDepart;
@@ -25,11 +36,13 @@ export class DepartmetService {
       catchError(this.handleError)
     );
   }
-  getHeaders(): HttpHeaders | { [header: string]: string | string[]; } {
+  private getHeaders(): HttpHeaders {
+    const token = localStorage.getItem('token');
     return new HttpHeaders({
       'Content-Type': 'application/json',
-  });
-}
+      'Authorization': `Bearer ${token}`
+    });
+  }
   
 
   recoverDepartment(id: number): Observable<void> {
@@ -54,6 +67,7 @@ export class DepartmetService {
       catchError(this.handleError)
     );
   }
+
 
   updateDepartment(id: number, department: Department): Observable<Department> {
     return this.http.put<Department>(`${this.baseUrl}/departments/${id}`, department, { headers: this.getHeaders() }).pipe(
