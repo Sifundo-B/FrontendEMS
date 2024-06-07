@@ -1,0 +1,28 @@
+<div class="container-positions">
+    <div class="top">
+      <div class="titles">
+        <h1>Positions</h1>
+        <p>List of positions</p>
+      </div>
+      <button routerLink="/positions"><i class="fa-solid fa-plus"></i>Add new position</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Position Name</th>
+          <th>Position Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let position of positions">
+          <td>{{position.positionName}}</td>
+          <td>R{{position.salary}}</td>
+          <td>
+            <a routerLink="/positions" [queryParams]="{ id: position.positionId }" class="update-btn">Update</a>
+            <a class="delete-btn" (click)="deletePosition(position)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
