@@ -1,34 +1,22 @@
-<!-- <div class="container-employees">
-    <div class="top">
-      <div class="titles">
-        <h1>Employees</h1>
-        <p>Employee contact details and info</p>
+<div class="container">
+  <div class="heading">
+    <h1>Add Positions</h1>
+  </div>
+  <form [formGroup]="positionForm" (ngSubmit)="addPosition()">
+    <div class="row mb-3">
+      <div class="col-md-3">
+        <label for="positionName" class="form-label">Position name</label>
+        <input formControlName="positionName" class="form-control" id="positionName">
       </div>
-      <button routerLink="/registration"><i class="fa-solid fa-plus"></i>Add new employee</button>
+      <div class="col-md-3">
+        <label for="salary" class="form-label">Position Salary</label>
+        <input formControlName="salary" class="form-control" id="salary">
+      </div>
+    
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Employee Name</th>
-          <th>Title</th>
-          <th>Department</th>
-          <th>Phone</th>
-          <th>Address</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let employee of employees">
-          <td scope="row">{{employee.firstName}} {{employee.lastName}}</td>
-          <td>{{employee.position?.positionName}}</td>
-          <td>{{employee.department?.DepartmentName}}</td>
-          <td>{{employee.phoneNumber}}</td>
-          <td>{{employee.address}}</td>
-          <td>
-            <a routerLink="/update-emp" [queryParams]="{ id: employee.id }" class="update-btn">Update</a>
-            <a class="delete-btn" (click)="deleteEmployee(employee)">Delete</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div> -->
+    <div class="col-md-12 buttons-sub">
+      <button type="submit" class="btn btn-primary">Add</button>
+      <button type="submit" class="btn btn-primary" routerLink="/positions-list">back</button>
+    </div>
+  </form>
+</div>
