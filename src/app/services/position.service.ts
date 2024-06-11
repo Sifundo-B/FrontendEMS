@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Department, Position } from '../models/EMPUser';
@@ -7,6 +8,8 @@ import { Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class PositionService {
+
+  constructor() { }
   private baseUrl = 'http://localhost:8080/api';
   private currentPosition: any;
   private currentUser: any;

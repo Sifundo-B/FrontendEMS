@@ -1,1 +1,27 @@
-<p>department-list works!</p>
+<div class="container-employees">
+    <div class="top">
+      <div class="titles">
+        <h1>Departments</h1>
+        <p>Department details and info</p>
+      </div>
+      <button routerLink="/department"><i class="fa-solid fa-plus"></i>Add new Department</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Department Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let department of departments">
+          <td scope="row">{{department.DepartmentName}} {{department.DepartmentName}}</td>
+          <td>
+            <a routerLink="/update-emp" [queryParams]="{ id: department.id }" class="update-btn">Update</a>
+            <a class="delete-btn" (click)="deleteDepartment(department)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

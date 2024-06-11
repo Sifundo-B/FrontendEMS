@@ -9,8 +9,9 @@ import { LoginComponent } from './components/login/logincomponent';
 import { RegistrationComponent } from './registration/registration.component';
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
-import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
+import { DeletedEmployeesComponent } from './components/deleted-employees/deleted-employees.component';
 import { DepartmentComponent } from './components/department/department.component';
+import { DepartmentListComponent } from './components/department-list/department-list.component';
 import { PositionComponent } from './components/position/position.component';
 import { PositionsListComponent } from './components/positions-list/positions-list.component';
 
@@ -28,6 +29,8 @@ const routes: Routes = [
   {path: 'update-emp', component: UpdateEmpComponent},
   {path: 'tax-cert', component: TaxCertComponent},
   {path: 'recover',component:DeletedEmployeesComponent},
+  {path: 'departmentList',component:DepartmentListComponent},
+ {path: 'department', component:DepartmentComponent}
  {path: 'department', component:DepartmentComponent},
    {path: 'positions', component:PositionComponent},
    {path: 'positions-list', component:PositionsListComponent}

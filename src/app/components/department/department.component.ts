@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { DepartmetService } from 'src/app/department.service';
+import { DepartmetService } from 'src/app/services/department.service';
 import { Department } from 'src/app/models/EMPUser';
 
 @Component({
