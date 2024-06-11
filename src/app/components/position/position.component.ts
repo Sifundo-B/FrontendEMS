@@ -17,10 +17,11 @@ export class PositionComponent {
 
   constructor(private positionService: PositionService,
     private fb: FormBuilder,
-    private router: Router //w Inject Router here
+    private router: Router 
   ) {
     this.positionForm = this.fb.group({
-      departmentName: ['', Validators.required]
+      positionName:['', Validators.required],
+      salary: ['', Validators.required]
       
     });
   }

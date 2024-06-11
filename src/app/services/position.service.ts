@@ -58,7 +58,7 @@ export class PositionService {
   }
 
   createPosition(position: Position): Observable<Position> {
-    return this.http.post<Position>(`${this.baseUrl}/positions`, position, { headers: this.getHeaders() }).pipe(
+    return this.http.post<Position>(`${this.baseUrl}/positions/create`, position, { headers: this.getHeaders() }).pipe(
       catchError(this.handleError)
     );
   }
