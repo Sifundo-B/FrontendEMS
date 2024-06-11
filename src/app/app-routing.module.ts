@@ -30,7 +30,7 @@ const routes: Routes = [
   {path: 'tax-cert', component: TaxCertComponent},
   {path: 'recover',component:DeletedEmployeesComponent},
   {path: 'departmentList',component:DepartmentListComponent},
- {path: 'department', component:DepartmentComponent}
+ {path: 'department', component:DepartmentComponent},
  {path: 'department', component:DepartmentComponent},
    {path: 'positions', component:PositionComponent},
    {path: 'positions-list', component:PositionsListComponent}

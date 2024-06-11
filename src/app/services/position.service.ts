@@ -1,4 +1,3 @@
-import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Department, Position } from '../models/EMPUser';
@@ -9,19 +8,13 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class PositionService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
   private baseUrl = 'http://localhost:8080/api';
   private currentPosition: any;
   private currentUser: any;
 
 
-  constructor(private http: HttpClient) { }
-
-   setCurrentUser(user: any, token: string) {
-    localStorage.clear();
-    localStorage.setItem('currentUser', JSON.stringify(user));
-    localStorage.setItem('token', token);
-  }
+  
 
   getCurrentUser() {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
