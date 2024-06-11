@@ -10,7 +10,7 @@ import { LoginComponent } from './components/login/logincomponent';
 import { RegistrationComponent } from './registration/registration.component';
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
-import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
+import { DeletedEmployeesComponent } from './components/deleted-employees/deleted-employees.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { DepartmentListComponent } from './components/department-list/department-list.component';
 

@@ -4,7 +4,7 @@ import { PaySlipComponent } from './pages/pay-slip/pay-slip.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/logincomponent';
 
 //import { NavigationComponent } from './components/navigation/navigation.component';
@@ -21,7 +21,7 @@ import { NavigationComponent} from './components/navigation/navigation.component
 import { UpdateEmpComponent } from './components/update-emp/update-emp.component';
 import { TaxCertComponent } from './components/tax-cert/tax-cert.component';
 import { MockSideComponent } from './components/mock-side/mock-side.component';
-import { DeletedEmployeesComponent } from './deleted-employees/deleted-employees.component';
+import { DeletedEmployeesComponent } from './components/deleted-employees/deleted-employees.component';
 import { DepartmentComponent } from './components/department/department.component';
 import { PositionComponent } from './components/position/position.component';
 import { DepartmentListComponent } from './components/department-list/department-list.component';
@@ -38,7 +38,6 @@ import { DepartmentListComponent } from './components/department-list/department
     AdminDashboardComponent,
     AllEmployeesComponent,
     LoginComponent,
-    DashboardComponent,
     NavigationComponent,
     LandingPageComponent,
     UpdateEmpComponent,
