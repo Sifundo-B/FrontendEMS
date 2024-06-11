@@ -38,6 +38,7 @@ import { DepartmentListComponent } from './components/department-list/department
     AdminDashboardComponent,
     AllEmployeesComponent,
     LoginComponent,
+    DashboardComponent,
     NavigationComponent,
     LandingPageComponent,
     UpdateEmpComponent,
